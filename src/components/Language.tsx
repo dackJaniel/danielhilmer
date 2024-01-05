@@ -1,26 +1,48 @@
 import Image from "next/image";
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCss3,
+  faHtml5,
+  faJs,
+  faNodeJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+import { faDiagramNext } from "@fortawesome/free-solid-svg-icons";
 
 const Language = () => {
-  const wh = 50;
   return (
     <>
-      <div>Sprachen</div>
-      <ul className="flex items-center justify-center gap-3">
-        <li>
-          <Image src="./icons/html.svg" alt="" width={wh} height={wh} />
+      <ul className="flex items-center gap-3">
+        <li className="rounded-full bg-slate-900">
+          <FontAwesomeIcon
+            className="w-10 h-10 text-slate-100 p-2"
+            icon={faHtml5}
+          />
         </li>
-        <li>
-          <Image src="./icons/css.svg" alt="" width={wh} height={wh} />
+        <li className="rounded-full bg-slate-900">
+          <FontAwesomeIcon
+            className="w-10 h-10 text-slate-100 p-2"
+            icon={faCss3}
+          />
         </li>
-        <li>
-          <Image src="./icons/js.svg" alt="" width={wh} height={wh} />
+        <li className="rounded-full bg-slate-900">
+          <FontAwesomeIcon
+            className="w-10 h-10 text-slate-100 p-2"
+            icon={faJs}
+          />
         </li>
-        <li>
-          <Image src="./icons/nextjs.svg" alt="" width={wh} height={wh} />
+        <li className="rounded-full bg-slate-900">
+          <FontAwesomeIcon
+            className="w-10 h-10 text-slate-100 p-2"
+            icon={faReact}
+          />
         </li>
-        <li>
-          <Image src="./icons/nodejs.svg" alt="" width={wh} height={wh} />
+        <li className="rounded-full bg-slate-900">
+          <FontAwesomeIcon
+            className="w-10 h-10 text-slate-100 p-2"
+            icon={faNodeJs}
+          />
         </li>
       </ul>
     </>
