@@ -25,7 +25,7 @@ const Nav = () => {
             </Link>
           </li>
           <li>
-            <ButtonLink href="/" name="Kontakt" />
+            <ButtonLink href="/" name="Kontakt" primary={true} />
           </li>
         </ul>
       </div>

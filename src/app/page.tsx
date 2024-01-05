@@ -20,19 +20,24 @@ export default function Home() {
           <h1 className="text-7xl">Freiberufliche JavaScript Entwiklung</h1>
           <div className="my-8 bg-slate-300 p-2 rounded-md flex gap-2">
             <FontAwesomeIcon
-              className="w-5 h-5 text-slate-900"
+              className="min-w-5 max-w-5 h-5 text-slate-900"
               icon={faInfoCircle}
             />
             <p>
-              Hi, ich bin <span className="font-bold">Daniel Hilmer</span>
-              <br />
-              ich entwickle <span className="font-bold">
-                Webseiten
-              </span> und <span className="font-bold">Webapps</span>, oft auf
-              basis von JavaScript Frameworks wie React mit NodeJS oder NextJS.
+              Hi, ich bin <span className="font-bold">Daniel Hilmer</span>, ein
+              leidenschaftlicher Webentwickler, der sich auf die Erstellung
+              ansprechender Websites und innovativer Webanwendungen
+              spezialisiert hat. Mit einem starken Fokus auf
+              <span className="font-bold"> JavaScript-Frameworks</span> wie
+              React, NodeJS und NextJS, kombiniert mit einem fundierten
+              Verständnis für modernste Technologien, bringe ich eine kreative
+              und effektive Herangehensweise an jedes Projekt.
             </p>
           </div>
-          <ButtonLink href="/" name="Kontakt aufnehmen" />
+          <div className="flex gap-2">
+            <ButtonLink href="/" name="Kontakt aufnehmen" primary={true} />
+            <ButtonLink href="/" name="Werdegang" />
+          </div>
         </div>
       </header>
       <main></main>
