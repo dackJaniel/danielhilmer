@@ -1,8 +1,20 @@
 import ButtonLink from "@/components/ButtonLink";
-import Language from "@/components/Language";
-import { faInfo, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import IconContainer from "@/components/Icons/IconContainer";
+import RoundedIcon from "@/components/Icons/RoundedIcon";
+import Timeline from "@/components/Timeline/Timeline";
+import {
+  faCss3,
+  faGithub,
+  faHtml5,
+  faJs,
+  faLinkedinIn,
+  faNodeJs,
+  faReact,
+} from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,7 +28,13 @@ export default function Home() {
           alt="Daniel Hilmer Web Development"
         />
         <div className="w-1/2 mr-4">
-          <Language />
+          <IconContainer>
+            <RoundedIcon icon={faHtml5} />
+            <RoundedIcon icon={faCss3} />
+            <RoundedIcon icon={faJs} />
+            <RoundedIcon icon={faReact} />
+            <RoundedIcon icon={faNodeJs} />
+          </IconContainer>
           <h1 className="text-7xl">Freiberufliche JavaScript Entwiklung</h1>
           <div className="my-8 bg-slate-300 p-2 rounded-md flex gap-2">
             <FontAwesomeIcon
@@ -34,13 +52,25 @@ export default function Home() {
               und effektive Herangehensweise an jedes Projekt.
             </p>
           </div>
-          <div className="flex gap-2">
-            <ButtonLink href="/" name="Kontakt aufnehmen" primary={true} />
-            <ButtonLink href="/" name="Werdegang" />
+          <div className="flex justify-between gap-2">
+            <div className="flex gap-2">
+              <ButtonLink href="/" name="Kontakt aufnehmen" primary={true} />
+              <ButtonLink href="/" name="Werdegang" />
+            </div>
+            <IconContainer>
+              <Link href="">
+                <RoundedIcon icon={faGithub} />
+              </Link>
+              <Link href="">
+                <RoundedIcon icon={faLinkedinIn} />
+              </Link>
+            </IconContainer>
           </div>
         </div>
       </header>
-      <main></main>
+      <main className="my-6">
+        <Timeline />
+      </main>
     </>
   );
 }

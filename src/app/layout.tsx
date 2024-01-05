@@ -17,7 +17,7 @@ export default function RootLayout({
         src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
       <body className="bg-slate-100">
         <Nav />
-        <main>{children}</main>
+        {children}
         <Footer />
       </body>
     </html>
