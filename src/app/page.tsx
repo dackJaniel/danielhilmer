@@ -68,9 +68,7 @@ export default function Home() {
           </div>
         </div>
       </header>
-      <main className="my-6">
-        <Timeline />
-      </main>
+      {/* <main className="my-6"><Timeline /></main> */}
     </>
   );
 }
