@@ -50,6 +50,7 @@ export default function Impressum() {
         Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren
         vor einer Verbraucherschlichtungsstelle teilzunehmen.
       </p>
+
     </>
   );
 }
