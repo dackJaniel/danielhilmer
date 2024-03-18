@@ -3,8 +3,8 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-slate-900 text-slate-100 w-full shadow-md py-2">
-      <div className="flex flex-col justify-between max-w-6xl m-auto">
+    <footer className="bg-white text-slate-900 w-full shadow-md py-4">
+      <div className="flex flex-col justify-between m-auto max-w-7xl ">
         <div className="flex">
           <div>
             <h4 className="text-lg">Datenschutz</h4>

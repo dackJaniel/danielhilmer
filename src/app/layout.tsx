@@ -1,6 +1,6 @@
-import Nav from "@/components/Nav";
+import Nav from "@/_components/Nav";
 import "./globals.css";
-import Footer from "@/components/Footer";
+import Footer from "@/_components/Footer";
 
 export default function RootLayout({
   children,
@@ -15,7 +15,7 @@ export default function RootLayout({
         data-eu-mode="true"
         data-settings-id="t5sF0OzEcttMs-"
         src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
-      <body className="bg-slate-100">
+      <body className="bg-slate-200">
         <Nav />
         {children}
         <Footer />

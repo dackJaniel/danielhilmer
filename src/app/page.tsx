@@ -1,7 +1,7 @@
-import ButtonLink from "@/components/ButtonLink";
-import IconContainer from "@/components/Icons/IconContainer";
-import RoundedIcon from "@/components/Icons/RoundedIcon";
-import Timeline from "@/components/Timeline/Timeline";
+import ButtonLink from "@/_components/ButtonLink";
+import IconContainer from "@/_components/Icons/IconContainer";
+import RoundedIcon from "@/_components/Icons/RoundedIcon";
+import Timeline from "@/_components/Timeline/Timeline";
 import {
   faCss3,
   faGithub,
@@ -19,15 +19,15 @@ import Link from "next/link";
 export default function Home() {
   return (
     <>
-      <header className="h-screen flex gap-4 items-center">
+      <main className="h-screen flex flex-col md:flex-row gap-4 items-center max-w-lg md:max-w-7xl m-auto">
         <Image
-          className="w-1/2 h-full object-cover"
+          className="md:w-1/2 md:h-full object-cover"
           width={1000}
           height={1000}
           src="/images/danielhilmer.jpg"
           alt="Daniel Hilmer Web Development"
         />
-        <div className="w-1/2 mr-4">
+        <div className="md:w-1/2 mr-4">
           <IconContainer>
             <RoundedIcon icon={faHtml5} />
             <RoundedIcon icon={faCss3} />
@@ -67,7 +67,7 @@ export default function Home() {
             </IconContainer>
           </div>
         </div>
-      </header>
+      </main>
       {/* <main className="my-6"><Timeline /></main> */}
     </>
   );
