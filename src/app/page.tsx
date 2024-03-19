@@ -1,7 +1,6 @@
 import ButtonLink from "@/_components/ButtonLink";
 import IconContainer from "@/_components/Icons/IconContainer";
 import RoundedIcon from "@/_components/Icons/RoundedIcon";
-import Timeline from "@/_components/Timeline/Timeline";
 import {
   faCss3,
   faGithub,
@@ -11,7 +10,7 @@ import {
   faNodeJs,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { faEnvelope, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
