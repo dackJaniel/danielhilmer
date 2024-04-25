@@ -53,8 +53,12 @@ export default function Home() {
           </div>
           <div className="flex justify-between gap-2">
             <div className="flex gap-2">
-              <ButtonLink href="/" name="Kontakt aufnehmen" primary={true} />
-              <ButtonLink href="/" name="Werdegang" />
+              <ButtonLink
+                href="/kontakt"
+                name="Kontakt aufnehmen"
+                primary={true}
+              />
+              {/* <ButtonLink href="/" name="Werdegang" /> */}
             </div>
             <IconContainer>
               <Link href="">
@@ -67,7 +71,6 @@ export default function Home() {
           </div>
         </div>
       </main>
-      {/* <main className="my-6"><Timeline /></main> */}
     </>
   );
 }

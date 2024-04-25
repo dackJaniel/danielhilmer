@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-white text-slate-900 w-full shadow-md py-4">
+    <footer className="bg-gray-100 text-slate-900 w-full shadow-md py-4">
       <div className="flex flex-col justify-between m-auto max-w-7xl ">
         <div className="flex">
           <div>
@@ -19,9 +19,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="mt-4">
-          <p className="text-sm">
-            <span className="font-bold">© 2024</span> Daniel Hilmer
-          </p>
+          <p className="text-sm">© Copyright 2024 - Daniel Hilmer</p>
         </div>
       </div>
     </footer>

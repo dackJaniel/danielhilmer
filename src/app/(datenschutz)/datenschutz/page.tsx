@@ -2,10 +2,10 @@ import React from "react";
 
 export default function Datenschutzerklaerung() {
   return (
-    <>
-      <h1>Datenschutz&shy;erkl&auml;rung</h1>
-      <h2>1. Datenschutz auf einen Blick</h2>
-      <h3>Allgemeine Hinweise</h3>{" "}
+    <main className="max-w-lg md:max-w-7xl m-auto py-28">
+      <h1 className="text-7xl">Datenschutz&shy;erkl&auml;rung</h1>
+      <h2 className="text-5xl mt-5 mb-2">1. Datenschutz auf einen Blick</h2>
+      <h3 className="text-3xl mt-3 mb-1">Allgemeine Hinweise</h3>{" "}
       <p>
         Die folgenden Hinweise geben einen einfachen &Uuml;berblick
         dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie
@@ -14,8 +14,8 @@ export default function Datenschutzerklaerung() {
         Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie
         unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.
       </p>
-      <h3>Datenerfassung auf dieser Website</h3>{" "}
-      <h4>
+      <h3 className="text-3xl mt-3 mb-1">Datenerfassung auf dieser Website</h3>{" "}
+      <h4 className="text-xl">
         Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?
       </h4>{" "}
       <p>
@@ -24,7 +24,7 @@ export default function Datenschutzerklaerung() {
         &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser
         Datenschutzerkl&auml;rung entnehmen.
       </p>{" "}
-      <h4>Wie erfassen wir Ihre Daten?</h4>{" "}
+      <h4 className="text-xl">Wie erfassen wir Ihre Daten?</h4>{" "}
       <p>
         Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
         mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die Sie in
@@ -37,13 +37,15 @@ export default function Datenschutzerklaerung() {
         Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
         automatisch, sobald Sie diese Website betreten.
       </p>{" "}
-      <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>{" "}
+      <h4 className="text-xl">Wof&uuml;r nutzen wir Ihre Daten?</h4>{" "}
       <p>
         Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der
         Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur Analyse
         Ihres Nutzerverhaltens verwendet werden.
       </p>{" "}
-      <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>{" "}
+      <h4 className="text-xl">
+        Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?
+      </h4>{" "}
       <p>
         Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber
         Herkunft, Empf&auml;nger und Zweck Ihrer gespeicherten personenbezogenen
@@ -60,7 +62,9 @@ export default function Datenschutzerklaerung() {
         Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie
         sich jederzeit an uns wenden.
       </p>
-      <h3>Analyse-Tools und Tools von Dritt&shy;anbietern</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">
+        Analyse-Tools und Tools von Dritt&shy;anbietern
+      </h3>{" "}
       <p>
         Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch
         ausgewertet werden. Das geschieht vor allem mit sogenannten
@@ -70,9 +74,9 @@ export default function Datenschutzerklaerung() {
         Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in der
         folgenden Datenschutzerkl&auml;rung.
       </p>
-      <h2>2. Hosting</h2>
+      <h2 className="text-5xl mt-5 mb-2">2. Hosting</h2>
       <p>Wir hosten die Inhalte unserer Website bei folgendem Anbieter:</p>
-      <h3>Externes Hosting</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Externes Hosting</h3>{" "}
       <p>
         Diese Website wird extern gehostet. Die personenbezogenen Daten, die auf
         dieser Website erfasst werden, werden auf den Servern des Hosters / der
@@ -109,8 +113,10 @@ export default function Datenschutzerklaerung() {
         <br />
         privacy@vercel.com
       </p>
-      <h2>3. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
-      <h3>Datenschutz</h3>{" "}
+      <h2 className="text-5xl mt-5 mb-2">
+        3. Allgemeine Hinweise und Pflicht&shy;informationen
+      </h2>
+      <h3 className="text-3xl mt-3 mb-1">Datenschutz</h3>{" "}
       <p>
         Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen
         Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich
@@ -131,7 +137,9 @@ export default function Datenschutzerklaerung() {
         aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff
         durch Dritte ist nicht m&ouml;glich.
       </p>
-      <h3>Hinweis zur verantwortlichen Stelle</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">
+        Hinweis zur verantwortlichen Stelle
+      </h3>{" "}
       <p>
         Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser
         Website ist:
@@ -154,7 +162,7 @@ export default function Datenschutzerklaerung() {
         der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen,
         E-Mail-Adressen o. &Auml;.) entscheidet.
       </p>
-      <h3>Speicherdauer</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Speicherdauer</h3>{" "}
       <p>
         Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere
         Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei
@@ -167,7 +175,7 @@ export default function Datenschutzerklaerung() {
         letztgenannten Fall erfolgt die L&ouml;schung nach Fortfall dieser
         Gr&uuml;nde.
       </p>
-      <h3>
+      <h3 className="text-3xl mt-3 mb-1">
         Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf
         dieser Website
       </h3>{" "}
@@ -194,7 +202,7 @@ export default function Datenschutzerklaerung() {
         Rechtsgrundlagen wird in den folgenden Abs&auml;tzen dieser
         Datenschutzerkl&auml;rung informiert.
       </p>
-      <h3>
+      <h3 className="text-3xl mt-3 mb-1">
         Hinweis zur Datenweitergabe in datenschutzrechtlich nicht sichere
         Drittstaaten sowie die Weitergabe an US-Unternehmen, die nicht
         DPF-zertifiziert sind
@@ -218,7 +226,9 @@ export default function Datenschutzerklaerung() {
         &Uuml;bermittlungen an Drittstaaten einschlie&szlig;lich der
         Datenempf&auml;nger finden Sie in dieser Datenschutzerkl&auml;rung.
       </p>
-      <h3>Empfänger von personenbezogenen Daten</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">
+        Empfänger von personenbezogenen Daten
+      </h3>{" "}
       <p>
         Im Rahmen unserer Gesch&auml;ftst&auml;tigkeit arbeiten wir mit
         verschiedenen externen Stellen zusammen. Dabei ist teilweise auch eine
@@ -235,7 +245,9 @@ export default function Datenschutzerklaerung() {
         einer gemeinsamen Verarbeitung wird ein Vertrag &uuml;ber gemeinsame
         Verarbeitung geschlossen.
       </p>
-      <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">
+        Widerruf Ihrer Einwilligung zur Datenverarbeitung
+      </h3>{" "}
       <p>
         Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer
         ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie k&ouml;nnen eine
@@ -243,7 +255,7 @@ export default function Datenschutzerklaerung() {
         Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten
         Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
       </p>
-      <h3>
+      <h3 className="text-3xl mt-3 mb-1">
         Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen
         sowie gegen Direktwerbung (Art. 21 DSGVO)
       </h3>{" "}
@@ -272,7 +284,7 @@ export default function Datenschutzerklaerung() {
         MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21
         ABS. 2 DSGVO).
       </p>
-      <h3>
+      <h3 className="text-3xl mt-3 mb-1">
         Beschwerde&shy;recht bei der zust&auml;ndigen Aufsichts&shy;beh&ouml;rde
       </h3>{" "}
       <p>
@@ -283,7 +295,9 @@ export default function Datenschutzerklaerung() {
         Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher
         oder gerichtlicher Rechtsbehelfe.
       </p>
-      <h3>Recht auf Daten&shy;&uuml;bertrag&shy;barkeit</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">
+        Recht auf Daten&shy;&uuml;bertrag&shy;barkeit
+      </h3>{" "}
       <p>
         Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung
         oder in Erf&uuml;llung eines Vertrags automatisiert verarbeiten, an sich
@@ -292,7 +306,9 @@ export default function Datenschutzerklaerung() {
         Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur,
         soweit es technisch machbar ist.
       </p>
-      <h3>Auskunft, Berichtigung und L&ouml;schung</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">
+        Auskunft, Berichtigung und L&ouml;schung
+      </h3>{" "}
       <p>
         Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit
         das Recht auf unentgeltliche Auskunft &uuml;ber Ihre gespeicherten
@@ -301,7 +317,9 @@ export default function Datenschutzerklaerung() {
         L&ouml;schung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema
         personenbezogene Daten k&ouml;nnen Sie sich jederzeit an uns wenden.
       </p>
-      <h3>Recht auf Einschr&auml;nkung der Verarbeitung</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">
+        Recht auf Einschr&auml;nkung der Verarbeitung
+      </h3>{" "}
       <p>
         Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer
         personenbezogenen Daten zu verlangen. Hierzu k&ouml;nnen Sie sich
@@ -347,7 +365,7 @@ export default function Datenschutzerklaerung() {
         wichtigen &ouml;ffentlichen Interesses der Europ&auml;ischen Union oder
         eines Mitgliedstaats verarbeitet werden.
       </p>
-      <h3>SSL- bzw. TLS-Verschl&uuml;sselung</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">SSL- bzw. TLS-Verschl&uuml;sselung</h3>{" "}
       <p>
         Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der
         &Uuml;bertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen
@@ -362,8 +380,10 @@ export default function Datenschutzerklaerung() {
         die Daten, die Sie an uns &uuml;bermitteln, nicht von Dritten mitgelesen
         werden.
       </p>
-      <h2>4. Datenerfassung auf dieser Website</h2>
-      <h3>Cookies</h3>{" "}
+      <h2 className="text-5xl mt-5 mb-2">
+        4. Datenerfassung auf dieser Website
+      </h2>
+      <h3 className="text-3xl mt-3 mb-1">Cookies</h3>{" "}
       <p>
         Unsere Internetseiten verwenden so genannte &bdquo;Cookies&ldquo;.
         Cookies sind kleine Datenpakete und richten auf Ihrem Endger&auml;t
@@ -418,7 +438,7 @@ export default function Datenschutzerklaerung() {
         Welche Cookies und Dienste auf dieser Website eingesetzt werden,
         k&ouml;nnen Sie dieser Datenschutzerkl&auml;rung entnehmen.
       </p>
-      <h3>Einwilligung mit Usercentrics</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Einwilligung mit Usercentrics</h3>{" "}
       <p>
         Diese Website nutzt die Consent-Technologie von Usercentrics, um Ihre
         Einwilligung zur Speicherung bestimmter Cookies auf Ihrem Endger&auml;t
@@ -471,7 +491,7 @@ export default function Datenschutzerklaerung() {
         Einwilligungen f&uuml;r den Einsatz bestimmter Technologien einzuholen.
         Rechtsgrundlage hierf&uuml;r ist Art. 6 Abs. 1 lit. c DSGVO.
       </p>
-      <h4>Auftragsverarbeitung</h4>{" "}
+      <h4 className="text-xl">Auftragsverarbeitung</h4>{" "}
       <p>
         Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) zur Nutzung
         des oben genannten Dienstes geschlossen. Hierbei handelt es sich um
@@ -480,7 +500,7 @@ export default function Datenschutzerklaerung() {
         Websitebesucher nur nach unseren Weisungen und unter Einhaltung der
         DSGVO verarbeitet.
       </p>
-      <h3>Kommunikation via WhatsApp</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Kommunikation via WhatsApp</h3>{" "}
       <p>
         F&uuml;r die Kommunikation mit unseren Kunden und sonstigen Dritten
         nutzen wir unter anderem den Instant-Messaging-Dienst WhatsApp. Anbieter
@@ -559,7 +579,7 @@ export default function Datenschutzerklaerung() {
         Wir haben einen Vertrag &uuml;ber Auftragsverarbeitung (AVV) mit dem
         oben genannten Anbieter geschlossen.
       </p>
-      <h3>Registrierung mit Google</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Registrierung mit Google</h3>{" "}
       <p>
         Statt einer direkten Registrierung auf dieser Website k&ouml;nnen Sie
         sich mit Google registrieren. Anbieter dieses Dienstes ist die Google
@@ -617,8 +637,8 @@ export default function Datenschutzerklaerung() {
           https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
         </a>
       </p>
-      <h2>5. Soziale Medien</h2>
-      <h3>LinkedIn</h3>{" "}
+      <h2 className="text-5xl mt-5 mb-2">5. Soziale Medien</h2>
+      <h3 className="text-3xl mt-3 mb-1">LinkedIn</h3>{" "}
       <p>
         Diese Website nutzt Elemente des Netzwerks LinkedIn. Anbieter ist die
         LinkedIn Ireland Unlimited Company, Wilton Plaza, Wilton Place, Dublin
@@ -665,8 +685,8 @@ export default function Datenschutzerklaerung() {
         </a>
         .
       </p>
-      <h2>6. Analyse-Tools und Werbung</h2>
-      <h3>Google Tag Manager</h3>{" "}
+      <h2 className="text-5xl mt-5 mb-2">6. Analyse-Tools und Werbung</h2>
+      <h3 className="text-3xl mt-3 mb-1">Google Tag Manager</h3>{" "}
       <p>
         Wir setzen den Google Tag Manager ein. Anbieter ist die Google Ireland
         Limited, Gordon House, Barrow Street, Dublin 4, Irland.
@@ -709,8 +729,10 @@ export default function Datenschutzerklaerung() {
           https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
         </a>
       </p>
-      <h2>7. Plugins und Tools</h2>
-      <h3>YouTube mit erweitertem Datenschutz</h3>{" "}
+      <h2 className="text-5xl mt-5 mb-2">7. Plugins und Tools</h2>
+      <h3 className="text-3xl mt-3 mb-1">
+        YouTube mit erweitertem Datenschutz
+      </h3>{" "}
       <p>
         Diese Website bindet Videos der Website YouTube ein. Betreiber der
         Seiten ist die Google Ireland Limited (&bdquo;Google&ldquo;), Gordon
@@ -786,7 +808,7 @@ export default function Datenschutzerklaerung() {
           https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active
         </a>
       </p>
-      <h3>Vimeo ohne Tracking (Do-Not-Track)</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Vimeo ohne Tracking (Do-Not-Track)</h3>{" "}
       <p>
         Diese Website nutzt Plugins des Videoportals Vimeo. Anbieter ist die
         Vimeo Inc., 555 West 18th Street, New York, New York 10011, USA.
@@ -831,7 +853,7 @@ export default function Datenschutzerklaerung() {
         </a>
         .
       </p>
-      <h3>Google Fonts (lokales Hosting)</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Google Fonts (lokales Hosting)</h3>{" "}
       <p>
         Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so
         genannte Google Fonts, die von Google bereitgestellt werden. Die Google
@@ -855,7 +877,7 @@ export default function Datenschutzerklaerung() {
         </a>
         .
       </p>
-      <h3>Font Awesome (lokales Hosting)</h3>{" "}
+      <h3 className="text-3xl mt-3 mb-1">Font Awesome (lokales Hosting)</h3>{" "}
       <p>
         Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten Font
         Awesome. Font Awesome ist lokal installiert. Eine Verbindung zu Servern
@@ -872,6 +894,6 @@ export default function Datenschutzerklaerung() {
         </a>
         .
       </p>
-    </>
+    </main>
   );
 }
