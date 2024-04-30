@@ -2,7 +2,7 @@
 
 import { Field, Form, Formik, FormikHelpers } from "formik";
 import { toFormikValidationSchema } from "zod-formik-adapter";
-import { z } from "zod";
+import { ZodError, ZodObject, z } from "zod";
 import Link from "next/link";
 import { sendEmail } from "./sendEmail";
 import { toast } from "react-toastify";
@@ -36,13 +36,25 @@ export const formValidationSchema = z.object({
   }),
 });
 
+type FormValues = z.infer<typeof formValidationSchema>;
+
 export default function Kontakt() {
+  const validateForm = (values: FormValues) => {
+    try {
+      formValidationSchema.parse(values);
+    } catch (error) {
+      if (error instanceof ZodError) {
+        return error.formErrors.fieldErrors;
+      }
+    }
+  };
+
   return (
     <>
       <main className="h-screen flex flex-col md:flex-row gap-4 items-center max-w-lg md:max-w-xl m-auto">
         <div className="w-full bg-white p-14 rounded-lg">
           <h1 className="text-4xl mb-8">Kontakt aufnehmen</h1>
-          <Formik
+          <Formik<FormValues>
             initialValues={{
               firstName: "",
               lastName: "",
@@ -50,7 +62,7 @@ export default function Kontakt() {
               message: "",
               privacy: false,
             }}
-            validationSchema={toFormikValidationSchema(formValidationSchema)}
+            validate={validateForm}
             onSubmit={async (values: IFormValues, { resetForm }) => {
               const response = await sendEmail(values);
 
