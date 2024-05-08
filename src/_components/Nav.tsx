@@ -5,7 +5,7 @@ import ButtonLink from "./ButtonLink";
 
 const Nav = () => {
   return (
-    <nav className="w-full sticky top-0 py-2">
+    <nav className="w-full sticky top-0 p-2">
       <div className="shadow-md py-2 px-4 rounded-full flex items-center justify-between max-w-7xl m-auto bg-gray-100">
         <Link href="/">
           <Image src="/images/logo_durch.png" alt="" width={40} height={40} />
@@ -27,7 +27,7 @@ const Nav = () => {
             </Link>
           </li> */}
           <li>
-            <ButtonLink href="/" name="Kontakt" primary={true} />
+            <ButtonLink href="/" name="Kontakt" type="primary" />
           </li>
         </ul>
       </div>

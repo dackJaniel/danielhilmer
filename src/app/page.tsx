@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="h-screen flex flex-col md:flex-row gap-4 items-center max-w-lg md:max-w-7xl m-auto">
+    <main className="md:h-screen flex flex-col md:flex-row gap-4 items-center max-w-2lg md:max-w-7xl m-auto p-2">
       <Image
         className="md:w-1/2 md:h-full object-cover"
         width={1000}
@@ -55,7 +55,7 @@ export default function Home() {
             <ButtonLink
               href="/kontakt"
               name="Kontakt aufnehmen"
-              primary={true}
+              type="primary"
             />
             {/* <ButtonLink href="/" name="Werdegang" /> */}
           </div>
