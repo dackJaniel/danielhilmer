@@ -51,8 +51,8 @@ export default function Kontakt() {
 
   return (
     <>
-      <main className="h-screen flex flex-col md:flex-row gap-4 items-center max-w-lg md:max-w-xl m-auto">
-        <div className="w-full bg-white p-14 rounded-lg">
+      <main className="py-8 flex flex-col md:flex-row gap-4 items-center max-w-lg md:max-w-xl m-auto">
+        <div className="w-full bg-white p-14 rounded-3xl">
           <h1 className="text-4xl mb-8">Kontakt aufnehmen</h1>
           <Formik<FormValues>
             initialValues={{
@@ -159,7 +159,7 @@ export default function Kontakt() {
                 </div>
                 <button
                   type="submit"
-                  className="px-6 py-2 inline-block rounded-md transition-colors text-slate-100 bg-cyan-900 hover:bg-cyan-700">
+                  className="px-6 py-2 inline-block rounded-full transition-colors text-slate-100 bg-cyan-900 hover:bg-cyan-700">
                   Absenden
                 </button>
               </Form>

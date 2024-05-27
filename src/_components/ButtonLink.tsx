@@ -15,7 +15,7 @@ const ButtonLink = ({
   return (
     <Link
       href={href}
-      className={`px-6 py-2 inline-block rounded-full transition-colors ${
+      className={`px-6 py-1 rounded-full transition-colors flex flex-col items-center ${
         type === "primary"
           ? "border-2 border-transparent text-slate-100 bg-cyan-900 hover:bg-cyan-700"
           : type === "secondary"
