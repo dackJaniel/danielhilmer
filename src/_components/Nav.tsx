@@ -12,20 +12,21 @@ const Nav = () => {
         </Link>
         <ul className="flex items-center gap-1">
           <li>
-            <ButtonLink
-              href="/projekte/dev"
-              name="Dev Projekte"
-              type="outline"
-            />
-          </li>
-          {/* <li>
             <Link
-              className="px-4 py-2 hover:bg-cyan-900 hover:text-slate-100 transition-colors rounded-md"
+              className="px-4 py-2 hover:bg-cyan-900 hover:text-slate-100 transition-colors rounded-full"
               href="https://danielhilmer.de/"
               target="_black">
-              Kunden Projekte
+              Kleinkunden
             </Link>
-          </li> */}
+          </li>
+          <li>
+            <Link
+              className="px-4 py-2 hover:bg-cyan-900 hover:text-slate-100 transition-colors rounded-full"
+              href="/projekte/dev"
+              target="_black">
+              Dev Projekte
+            </Link>
+          </li>
           <li>
             <ButtonLink href="/kontakt" name="Kontakt" type="primary" />
           </li>

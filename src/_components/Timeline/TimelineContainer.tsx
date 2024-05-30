@@ -42,7 +42,7 @@ const TimelineContainer = ({
         <small className="text-sm">{date}</small>
         <p className="mt-2">{description}</p>
 
-        {link && <ButtonLink href={link} name="Mehr erfahren" primary={true} />}
+        {/* {link && <ButtonLink href={link} name="Mehr erfahren" primary={true} />} */}
       </div>
     </div>
   );

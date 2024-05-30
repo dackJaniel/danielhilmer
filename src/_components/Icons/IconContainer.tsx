@@ -6,7 +6,7 @@ interface IconContainerProps {
 const IconContainer = ({ gap = "md", children }: IconContainerProps) => {
   return (
     <ul
-      className={`flex items-center ${
+      className={`flex items-center flex-wrap ${
         gap === "sm" ? "gap-1" : gap === "md" ? "gap-2" : "gap-3"
       }`}>
       {children}

@@ -1,7 +1,11 @@
 "use server"
 
-import nodemailer from "nodemailer";
+import nodemailer, { TransportOptions } from "nodemailer";
 import { IFormValues } from "./page";
+
+interface AddTransportOptions extends TransportOptions {
+    host: string;
+}
 
 const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
@@ -11,9 +15,16 @@ const transporter = nodemailer.createTransport({
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
     },
-});
+} as AddTransportOptions);
 
 export async function sendEmail({ firstName, lastName, email, message }: IFormValues) {
+    transporter.verify((error) => {
+        if (error) {
+            console.error("Error connecting to SMTP server", error);
+            return { success: false, error: error.message };
+        }
+    })
+
     try {
         await transporter.sendMail({
             from: "mail@danielhilmer.de",

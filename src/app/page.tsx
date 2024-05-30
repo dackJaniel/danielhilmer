@@ -17,9 +17,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="md:h-screen flex flex-col md:flex-row gap-4 items-center max-w-2lg md:max-w-7xl m-auto p-2">
+    <main className="md:h-1/2 flex flex-col md:flex-row gap-4 items-center max-w-2lg md:max-w-7xl m-auto p-2">
       <Image
-        className="md:w-1/2 md:h-full object-cover rounded-lg"
+        className="md:w-1/2 md:h-1/2 object-cover rounded-lg"
         width={1000}
         height={1000}
         src="/images/danielhilmer.jpg"

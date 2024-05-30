@@ -1,8 +1,7 @@
 "use client";
 
-import { Field, Form, Formik, FormikHelpers } from "formik";
-import { toFormikValidationSchema } from "zod-formik-adapter";
-import { ZodError, ZodObject, z } from "zod";
+import { Field, Form, Formik } from "formik";
+import { ZodError, z } from "zod";
 import Link from "next/link";
 import { sendEmail } from "./sendEmail";
 import { toast } from "react-toastify";
@@ -15,7 +14,7 @@ export interface IFormValues {
   privacy: boolean;
 }
 
-export const formValidationSchema = z.object({
+const formValidationSchema = z.object({
   firstName: z
     .string({ message: "Bitte gib einen Vornamen ein." })
     .min(2, { message: "Bitte gib mindestens 2 Zeichen ein." })
@@ -37,6 +36,17 @@ export const formValidationSchema = z.object({
 });
 
 type FormValues = z.infer<typeof formValidationSchema>;
+
+export function ThankYou() {
+  return (
+    <div className="w-full bg-white p-14 rounded-3xl">
+      <h1 className="text-4xl mb-8">Vielen Dank für deine Nachricht!</h1>
+      <p className="text-lg">
+        Ich werde mich so schnell wie möglich bei dir melden.
+      </p>
+    </div>
+  );
+}
 
 export default function Kontakt() {
   const validateForm = (values: FormValues) => {
@@ -64,16 +74,17 @@ export default function Kontakt() {
             }}
             validate={validateForm}
             onSubmit={async (values: IFormValues, { resetForm }) => {
-              const response = await sendEmail(values);
-
-              if (response.success) {
-                toast.success("Deine Nachricht wurde erfolgreich versendet.");
-                resetForm();
-              } else {
-                toast.error(
-                  "Es ist ein Fehler aufgetreten. Bitte versuche es später erneut."
-                );
-              }
+              toast.promise(sendEmail(values), {
+                pending: "Nachricht wird gesendet...",
+                success: {
+                  render() {
+                    resetForm();
+                    return "Nachricht wurde erfolgreich versendet.";
+                  },
+                },
+                error:
+                  "Es ist ein Fehler aufgetreten. Bitte versuche es erneut.",
+              });
             }}>
             {({ errors, touched }) => (
               <Form className="flex flex-col w-full gap-3">

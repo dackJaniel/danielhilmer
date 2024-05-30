@@ -12,7 +12,7 @@ interface IProjekteProps {
   tooltips?: string[];
   heading: string;
   description: string;
-  labels?: string[];
+  labels?: { name: string; link?: string; icon?: any }[];
   link?: string;
 }
 
@@ -61,13 +61,28 @@ const Projekte = ({
         </p>
       </div>
       <div className="flex gap-1">
-        {labels?.map((label, index) => (
-          <span
-            key={`${label}-${index}`}
-            className="bg-slate-900 text-white py-0 px-3 rounded-full">
-            {label}
-          </span>
-        ))}
+        {/* FIXME: Code Duplication */}
+        {/* TODO: Colors */}
+        {labels?.map((label, index) =>
+          label.link ? (
+            <Link
+              key={`${label.name}-${index}`}
+              href={label.link}
+              target="_blank"
+              className="bg-slate-900 text-white py-0 px-3 rounded-full cursor-pointer hover:bg-slate-700 transition-colors text-sm">
+              <span key={`${label.name}-${index}`}>
+                {label.name}{" "}
+                {label.icon && <FontAwesomeIcon icon={label.icon} />}
+              </span>
+            </Link>
+          ) : (
+            <span
+              key={`${label.name}-${index}`}
+              className="bg-slate-900 text-white py-0 px-3 rounded-full text-sm">
+              {label.name} {label.icon && <FontAwesomeIcon icon={label.icon} />}
+            </span>
+          )
+        )}
       </div>
     </div>
   );

@@ -41,8 +41,8 @@ const RoundedIcon = ({
             size === "sm"
               ? "w-4 h-4 p-1"
               : size === "md"
-              ? "w-6 h-6 p-2"
-              : "w-10 h-10 p-2"
+              ? "w-8 h-8 p-2"
+              : "w-14 h-14 p-2"
           }`}
           icon={icon}
         />
