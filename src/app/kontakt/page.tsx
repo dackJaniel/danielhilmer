@@ -37,17 +37,6 @@ const formValidationSchema = z.object({
 
 type FormValues = z.infer<typeof formValidationSchema>;
 
-export function ThankYou() {
-  return (
-    <div className="w-full bg-white p-14 rounded-3xl">
-      <h1 className="text-4xl mb-8">Vielen Dank für deine Nachricht!</h1>
-      <p className="text-lg">
-        Ich werde mich so schnell wie möglich bei dir melden.
-      </p>
-    </div>
-  );
-}
-
 export default function Kontakt() {
   const validateForm = (values: FormValues) => {
     try {
