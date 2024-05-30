@@ -17,9 +17,9 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="md:h-1/2 flex flex-col md:flex-row gap-4 items-center max-w-2lg md:max-w-7xl m-auto p-2">
+    <main className="md:h-1/2 flex flex-col md:flex-row gap-4 md:items-center max-w-2lg md:max-w-7xl m-auto p-2">
       <Image
-        className="md:w-1/2 md:h-1/2 object-cover rounded-lg"
+        className="w-48 h-48 rounded-full md:w-1/2 md:h-1/2 object-cover md:rounded-2xl"
         width={1000}
         height={1000}
         src="/images/danielhilmer.jpg"
@@ -35,10 +35,12 @@ export default function Home() {
           <RoundedIcon icon={faNodeJs} tooltip="NodeJS" />
           <RoundedIcon icon={faDatabase} tooltip="SQL, NoSQL, Prisma" />
         </IconContainer>
-        <h1 className="text-7xl">Freiberufliche JavaScript Entwicklung</h1>
-        <div className="my-8 bg-white shadow-sm p-8 rounded-lg flex gap-4 items-start">
+        <h1 className="text-4xl sm:text-5xl lg:text-7xl">
+          Freiberufliche JavaScript Entwicklung
+        </h1>
+        <div className="my-8 bg-white shadow-sm p-4 md:p-8 rounded-lg flex gap-4 items-start">
           <FontAwesomeIcon
-            className="min-w-5 max-w-5 h-5 text-slate-900"
+            className="min-w-5 max-w-5 h-5 text-slate-900 hidden sm:block"
             icon={faInfoCircle}
           />
           <p>

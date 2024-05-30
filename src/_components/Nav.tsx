@@ -16,7 +16,7 @@ const Nav = () => {
               className="px-4 py-2 hover:bg-cyan-900 hover:text-slate-100 transition-colors rounded-full"
               href="https://danielhilmer.de/"
               target="_black">
-              Kleinkunden
+              Mehr Info
             </Link>
           </li>
           <li>
