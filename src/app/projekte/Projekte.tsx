@@ -60,7 +60,7 @@ const Projekte = ({
             : description}
         </p>
       </div>
-      <div className="flex gap-1">
+      <div className="flex gap-1 flex-wrap">
         {/* FIXME: Code Duplication */}
         {/* TODO: Colors */}
         {labels?.map((label, index) =>

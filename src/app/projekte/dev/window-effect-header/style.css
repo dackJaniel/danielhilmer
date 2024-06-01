@@ -1,0 +1,38 @@
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#header {
+  /* --size: 100%; */
+  --speed: 50s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+  --gradientAngle: 0deg;
+
+  width: 80%;
+  height: 110%;
+  filter: blur(0.2rem);
+  background: conic-gradient(
+    from var(--gradientAngle) at 50% 50%,
+    #fb7d36 0,
+    #fbac43 15%,
+    #8339b2 40%,
+    #b42d75 56%,
+    #fc592d 94%,
+    #fb7d36 100%
+  );
+  animation: rotate var(--speed) var(--easing) alternate infinite;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  transition: all 1s ease-out;
+  z-index: 10;
+}
+
+@media (min-width: 720px) {
+  #header {
+    --size: 500px;
+  }
+}

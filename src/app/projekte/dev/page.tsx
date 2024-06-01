@@ -17,8 +17,8 @@ import {
 
 function page() {
   return (
-    <main className="py-10 flex flex-col gap-4 max-w-lg md:max-w-7xl m-auto">
-      <h1 className="text-7xl">Projekte</h1>
+    <main className="py-10 flex flex-col gap-4 max-w-lg md:max-w-7xl m-auto px-2">
+      <h1 className="text-7xl">Development Projekte</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         {/* Bachelor Projekt */}
         <Projekte
@@ -55,6 +55,24 @@ function page() {
           labels={[{ name: "In Arbeit" }]}
           imageSrc="danielhilmer.png"
         />
+        {/* Window Effect Header */}
+        <Projekte
+          icons={[faHtml5, faCss3, faJs, faReact]}
+          tooltips={["HTML5", "TailwindCSS", "JavaScript", "NextJS"]}
+          heading="Window effect header"
+          description="Open Source Projekt: Window-Glass Effect Header, umgesetzt mit NextJS und TailwindCSS."
+          link="/projekte/dev/window-effect-header"
+          imageSrc="glass-effect.png"
+          labels={[
+            { name: "Abgeschlossen" },
+            {
+              name: "GitHub",
+              link: "https://github.com/dackJaniel/window-effect-header",
+              icon: faUpRightFromSquare,
+            },
+            { name: "Open Source" },
+          ]}
+        />
         {/* Auto Kalender */}
         <Projekte
           icons={[faHtml5, faCss3, faJs, faNodeJs, faReact, faLock]}
@@ -77,6 +95,7 @@ function page() {
               icon: faUpRightFromSquare,
             },
           ]}
+          imageSrc="auto-calendar.png"
         />
         {/* Icon Generator */}
         <Projekte
@@ -113,24 +132,46 @@ function page() {
           labels={[{ name: "Abgeschlossen" }]}
         />
         <Projekte
-          icons={[faHtml5, faCss3, faJs, faNodeJs]}
-          tooltips={["HTML5", "CSS3/ SASS", "JavaScript", "NodeJS"]}
-          heading="Dog Tour"
-          description="Dieses Projekt konnte ich während meines Studiums bei der SAE in München umsetzen."
-          labels={[{ name: "Abgeschlossen" }]}
-        />
-        <Projekte
-          icons={[faFigma, faHtml5, faCss3, faJs, faNodeJs]}
+          icons={[faHtml5, faCss3, faJs, faNodeJs, faLock]}
           tooltips={[
-            "UI & UX Design",
             "HTML5",
             "CSS3/ SASS",
             "JavaScript",
             "NodeJS",
+            "Login (Home made)",
           ]}
+          heading="Dog Tours"
+          description="Fullstack Web-App, für eine Hundeschule, die Hundetouren (z.B. durch den Wald) anbieten möchte (Wie Geo cashing für Hunde), um das Gassi gehen interessanter zu machen."
+          imageSrc="dog-tours.png"
+          labels={[
+            { name: "Abgeschlossen" },
+            { name: "Konzept" },
+            { name: "Unveröffentlicht" },
+            { name: "Studium" },
+            // {
+            //   name: "GitHub",
+            //   link: "https://github.com/dackJaniel/Dog-Tours",
+            //   icon: faUpRightFromSquare,
+            // },
+          ]}
+        />
+        {/* useLess */}
+        <Projekte
+          icons={[faFigma, faHtml5, faCss3, faJs]}
+          tooltips={["UI & UX Design", "HTML5", "CSS3/ SASS", "JavaScript"]}
           heading="UseLess"
-          description="Dieses Projekt konnte ich während meines Studiums bei der SAE in München umsetzen."
-          labels={[{ name: "Abgeschlossen" }]}
+          description="Dies ist ein Projekt, welches sich über das erste Jahr meines Studiums an der SAE in München erstreckt hat. Zuerst habe ich das Design erstellt um es daraufhin mit HTML, CSS und später auch mit JavaScript umzusetzen."
+          imageSrc="useless.png"
+          labels={[
+            { name: "Abgeschlossen" },
+            { name: "Studium" },
+            { name: "Unveröffentlicht" },
+            {
+              name: "GitHub",
+              link: "https://github.com/dackJaniel/useLess",
+              icon: faUpRightFromSquare,
+            },
+          ]}
         />
       </div>
     </main>
