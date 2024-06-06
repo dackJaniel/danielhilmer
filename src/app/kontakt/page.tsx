@@ -5,6 +5,7 @@ import { ZodError, z } from "zod";
 import Link from "next/link";
 import { sendEmail } from "./sendEmail";
 import { toast } from "react-toastify";
+import { Button } from "@/components/ui/button";
 
 export interface IFormValues {
   firstName: string;
@@ -157,11 +158,9 @@ export default function Kontakt() {
                     <div className="text-red-500">{errors.privacy}</div>
                   ) : null}
                 </div>
-                <button
-                  type="submit"
-                  className="px-6 py-2 inline-block rounded-full transition-colors text-slate-100 bg-cyan-900 hover:bg-cyan-700">
-                  Absenden
-                </button>
+                <Button asChild>
+                  <button type="submit">Absenden</button>
+                </Button>
               </Form>
             )}
           </Formik>

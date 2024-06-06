@@ -1,5 +1,5 @@
-import IconContainer from "@/_components/Icons/IconContainer";
-import RoundedIcon from "@/_components/Icons/RoundedIcon";
+import IconContainer from "@/components/ui/Icons/IconContainer";
+import RoundedIcon from "@/components/ui/Icons/RoundedIcon";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -69,7 +69,7 @@ const Projekte = ({
               key={`${label.name}-${index}`}
               href={label.link}
               target="_blank"
-              className="bg-slate-900 text-white py-0 px-3 rounded-full cursor-pointer hover:bg-slate-700 transition-colors text-sm">
+              className="bg-slate-100 py-0 px-3 rounded-full cursor-pointer hover:bg-slate-200 transition-colors text-sm">
               <span key={`${label.name}-${index}`}>
                 {label.name}{" "}
                 {label.icon && <FontAwesomeIcon icon={label.icon} />}
@@ -78,7 +78,7 @@ const Projekte = ({
           ) : (
             <span
               key={`${label.name}-${index}`}
-              className="bg-slate-900 text-white py-0 px-3 rounded-full text-sm">
+              className="bg-slate-100 py-0 px-3 rounded-full text-sm">
               {label.name} {label.icon && <FontAwesomeIcon icon={label.icon} />}
             </span>
           )

@@ -32,12 +32,12 @@ const RoundedIcon = ({
         }}
       />
       <li
-        className="rounded-full bg-slate-900"
+        className="rounded-full bg-white shadow"
         data-tooltip-id={`${id}`}
         data-tooltip-content={`${tooltip}`}
         data-tooltip-place="bottom">
         <FontAwesomeIcon
-          className={`text-slate-100 flex justify-center items-center cursor-pointer ${
+          className={`text-gray-900 flex justify-center items-center cursor-pointer ${
             size === "sm"
               ? "w-4 h-4 p-1"
               : size === "md"

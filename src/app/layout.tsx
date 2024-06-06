@@ -1,7 +1,16 @@
-import Nav from "@/_components/Nav";
 import "./globals.css";
-import Footer from "@/_components/Footer";
-import { ToastContainer } from "react-toastify";
+import Footer from "@/components/ui/footer";
+import { Provider } from "@/components/provider";
+import Nav from "@/components/ui/nav";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Daniel Hilmer - Webentwicklung",
+  description:
+    "Freiberuflicher Webentwickler spezialisiert auf JavaScript-Frameworks wie React, NodeJS und NextJS.",
+  keywords:
+    "Webentwicklung, JavaScript, React, NodeJS, NextJS, Prisma, SQL, NoSQL, HTML5, CSS3, SCSS, Tailwind",
+};
 
 export default function RootLayout({
   children,
@@ -9,30 +18,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="de">
+    <html lang="de" suppressHydrationWarning>
       <script
         id="usercentrics-cmp"
-        async
         data-eu-mode="true"
         data-settings-id="t5sF0OzEcttMs-"
-        src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"></script>
+        src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
+        async></script>
+      <link rel="icon" href="./images/logo_durch.png" sizes="any" />
       <body className="bg-gray-100">
-        <Nav />
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-        />
-        <ToastContainer />
-        {children}
-        <Footer />
+        <Provider>
+          <Nav />
+          {children}
+          <Footer />
+        </Provider>
       </body>
     </html>
   );

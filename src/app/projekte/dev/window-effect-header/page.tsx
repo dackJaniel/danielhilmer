@@ -1,9 +1,11 @@
+import { Button } from "@/components/ui/button";
 import "./style.css";
+import Link from "next/link";
 
 export default function WindowEffect() {
   return (
-    <div className="p-2 rounded-2xl overflow-hidden max-h-[1000px]">
-      <div className="w-full h-screen flex justify-center items-center overflow-hidden relative bg-violet-500">
+    <div className="rounded-2xl overflow-hidden h-[800px] max-w-7xl m-auto">
+      <div className="w-full h-full flex justify-center items-center overflow-hidden relative bg-violet-500">
         <div id="header"></div>
         <div className="p-20 w-[90%] h-fit absolute rounded-lg backdrop-blur-3xl border overflow-hidden flex flex-col justify-center z-50 shadow-md">
           <p className="text-white text-8xl uppercase">
@@ -18,6 +20,13 @@ export default function WindowEffect() {
             repellendus asperiores dicta aut corporis mollitia. Magni, officia
             unde? Quas cumque quo delectus temporibus earum natus dolores.
           </p>
+          <Button asChild variant="outline" className="mt-4">
+            <Link
+              href="https://github.com/dackJaniel/window-effect-header"
+              target="_black">
+              Zum Code
+            </Link>
+          </Button>
         </div>
       </div>
     </div>

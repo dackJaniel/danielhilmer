@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import ButtonLink from "./ButtonLink";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button } from "@/components/ui/button";
+import { ModeToggle } from "./mode-toggle";
 
 function toggleMenu() {
   console.log("toggleMenu");
@@ -21,10 +21,12 @@ const Nav = () => {
           <Image src="/images/logo_durch.png" alt="" width={40} height={40} />
         </Link>
         <div className="md:hidden flex items-center gap-2">
-          <ButtonLink href="/kontakt" name="Kontakt" type="primary" />
+          <Button asChild>
+            <Link href="/kontakt">Kontakt</Link>
+          </Button>
           <FontAwesomeIcon
             icon={faHamburger}
-            className=" text-2xl cursor-pointer hover:text-gray-700 transition-colors"
+            className="text-2xl cursor-pointer hover:text-gray-700 transition-colors"
             onClick={toggleMenu}
           />
         </div>
@@ -33,29 +35,29 @@ const Nav = () => {
           className="flex hidden md:block absolute md:relative right-2 md:right-0 top-20 md:top-0 w-fit md:w-auto h-fit md:h-auto bg-white justify-center items-center px-4 md:px-0 py-8 md:py-0 rounded-2xl shadow-md md:shadow-none">
           <ul className="md:flex items-center gap-1">
             <li>
-              <Link
-                className="block px-4 py-1 md:hover:bg-cyan-900 hover:underline md:hover:no-underline md:hover:text-slate-100 transition-colors rounded-full "
-                href="https://danielhilmer.de/"
-                target="_black">
-                Mehr Info
-              </Link>
+              <Button asChild variant="link">
+                <Link href="https://danielhilmer.de/" target="_black">
+                  Mehr Info
+                </Link>
+              </Button>
             </li>
             <li>
-              <Link
-                className="block px-4 py-1 md:hover:bg-cyan-900 hover:underline md:hover:no-underline md:hover:text-slate-100 transition-colors rounded-full"
-                href="/projekte/kunden">
-                Kunden Projekte
-              </Link>
+              <Button asChild variant="link">
+                <Link href="/projekte/kunden">Kunden Projekte</Link>
+              </Button>
             </li>
             <li>
-              <Link
-                className="block px-4 py-1 md:hover:bg-cyan-900 hover:underline md:hover:no-underline md:hover:text-slate-100 transition-colors rounded-full"
-                href="/projekte/dev">
-                Dev Projekte
-              </Link>
+              <Button asChild variant="link">
+                <Link href="/projekte/dev">Dev Projekte</Link>
+              </Button>
             </li>
             <li className="hidden md:block">
-              <ButtonLink href="/kontakt" name="Kontakt" type="primary" />
+              <Button asChild>
+                <Link href="/kontakt">Kontakt</Link>
+              </Button>
+            </li>
+            <li>
+              <ModeToggle />
             </li>
           </ul>
         </div>

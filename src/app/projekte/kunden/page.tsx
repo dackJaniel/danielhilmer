@@ -11,7 +11,7 @@ import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 
 export default function page() {
   return (
-    <main className="py-10 flex flex-col gap-4 max-w-lg md:max-w-7xl m-auto px-2">
+    <main className="py-10 flex flex-col gap-8 max-w-lg md:max-w-7xl m-auto px-2">
       <h1 className="text-7xl">Kunden Projekte</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <Projekte
