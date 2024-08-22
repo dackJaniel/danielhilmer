@@ -44,7 +44,8 @@ function page() {
           ]}
           heading="Unbiased News"
           description="Bachelor Projekt: Entwicklung einer deutschsprachigen Künstlichen Intelligenz zur automatischen News-Analyse und politischen Einordnung für eine Unbiased News Webapplikation"
-          labels={[{ name: "In Arbeit" }]}
+          labels={[{ name: "In Arbeit" }, { name: "Bachelor Projekt" }]}
+          imageSrc="newsai.png"
         />
         {/* Daniel Hilmer */}
         <Projekte
@@ -129,7 +130,7 @@ function page() {
           heading="fokusfabrik"
           link="https://fokusfabrik.media/"
           description="Dieses Projekt konnte ich während meines Studiums bei der SAE in München umsetzen."
-          labels={[{ name: "Abgeschlossen" }]}
+          labels={[{ name: "Abgeschlossen" }, { name: "Studium" }]}
         />
         <Projekte
           icons={[faHtml5, faCss3, faJs, faNodeJs, faLock]}
