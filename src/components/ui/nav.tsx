@@ -34,13 +34,13 @@ const Nav = () => {
           id="menu"
           className="flex hidden md:block absolute md:relative right-2 md:right-0 top-20 md:top-0 w-fit md:w-auto h-fit md:h-auto bg-white justify-center items-center px-4 md:px-0 py-8 md:py-0 rounded-2xl shadow-md md:shadow-none">
           <ul className="md:flex items-center gap-1">
-            <li>
+            {/* <li>
               <Button asChild variant="link">
                 <Link href="https://danielhilmer.de/" target="_black">
                   Mehr Info
                 </Link>
               </Button>
-            </li>
+            </li> */}
             <li>
               <Button asChild variant="link">
                 <Link href="/projekte/kunden">Kunden Projekte</Link>
@@ -56,9 +56,9 @@ const Nav = () => {
                 <Link href="/kontakt">Kontakt</Link>
               </Button>
             </li>
-            <li>
+            {/* <li>
               <ModeToggle />
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
