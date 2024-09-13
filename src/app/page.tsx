@@ -1,5 +1,5 @@
-import IconContainer from "@/components/ui/Icons/IconContainer";
-import RoundedIcon from "@/components/ui/Icons/RoundedIcon";
+import IconContainer from "@/components/icons/IconContainer";
+import RoundedIcon from "@/components/icons/RoundedIcon";
 import { Button } from "@/components/ui/button";
 import {
   faCss3,

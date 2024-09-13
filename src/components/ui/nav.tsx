@@ -5,7 +5,6 @@ import Link from "next/link";
 import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@/components/ui/button";
-import { ModeToggle } from "./mode-toggle";
 
 function toggleMenu() {
   console.log("toggleMenu");
@@ -36,13 +35,6 @@ const Nav = () => {
           <ul className="md:flex items-center gap-1">
             <li>
               <Button asChild variant="link">
-                <Link href="https://danielhilmer.de/" target="_black">
-                  Mehr Info
-                </Link>
-              </Button>
-            </li>
-            <li>
-              <Button asChild variant="link">
                 <Link href="/projekte/kunden">Kunden Projekte</Link>
               </Button>
             </li>
@@ -56,9 +48,9 @@ const Nav = () => {
                 <Link href="/kontakt">Kontakt</Link>
               </Button>
             </li>
-            <li>
+            {/* <li>
               <ModeToggle />
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>

@@ -1,5 +1,5 @@
-import IconContainer from "@/components/ui/Icons/IconContainer";
-import RoundedIcon from "@/components/ui/Icons/RoundedIcon";
+import IconContainer from "@/components/icons/IconContainer";
+import RoundedIcon from "@/components/ui/icons/RoundedIcon";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";

@@ -1,7 +1,7 @@
 "use server"
 
 import nodemailer, { TransportOptions } from "nodemailer";
-import { IFormValues } from "./page";
+import { IFormValues } from "./_page";
 
 interface AddTransportOptions extends TransportOptions {
     host: string;

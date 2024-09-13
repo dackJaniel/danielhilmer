@@ -3,6 +3,7 @@ import Footer from "@/components/ui/footer";
 import { Provider } from "@/components/provider";
 import Nav from "@/components/ui/nav";
 import { Metadata } from "next";
+import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",
@@ -31,6 +32,7 @@ export default function RootLayout({
           <Nav />
           {children}
           <Footer />
+          <Toaster />
         </Provider>
       </body>
     </html>
