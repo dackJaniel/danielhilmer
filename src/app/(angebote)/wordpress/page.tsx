@@ -47,6 +47,9 @@ function WordPressPage() {
           WooCommerce planen oder das beliebte Elementor Pro als Page Builder
           bevorzugen – ich sorge dafür, dass Ihre Vision Realität wird.
         </p>
+        <Button asChild variant="default">
+          <Link href="/kontakt">Kontakt aufnehmen</Link>
+        </Button>
         <section className="flex gap-2">
           <Image
             src="/images/person-coding-wp.webp"
