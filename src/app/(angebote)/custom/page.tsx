@@ -27,11 +27,11 @@ function WordPressPage() {
         <title>Professionelle Webseite erstellen lassen</title>
         <meta
           name="description"
-          content="Professionelle WordPress-Websites erstellen lassen – individuell, schnell und professionell."
+          content="Professionelle WordPressWebsites erstellen lassen – individuell, schnell und professionell."
         />
         <meta
           name="keywords"
-          content="wordpress homepage erstellen lassen, wordpress website erstellen lassen, wordpress, woocommerce, elementor pro, wordpress website erstellen, wordpress elementor, wordpress kosten, website erstellen wordpress, wordpress agentur, website mit wordpress erstellen, website erstellen mit wordpress, wordpresscom"
+          content="webseite erstellen lassen, website erstellen lassen, homepage erstellen lassen, kosten für website erstellung, webseiten relaunch, kosten webseite erstellen, erstellung internetseite, kosten erstellung einer website, kosten für die erstellung einer website, webseite ersellen lassen, website erstellen lassen preise, kostenlose website mit eigener domain, internetseite erstellen lassen, website anbieter, website bauen lassen, website erstellen lassen freelancer, website programmieren lassen, website erstellen lassen kosten, homepage anbieter"
         />
       </Head>
       <main className="py-10 flex flex-col gap-8 md:max-w-5xl m-auto px-2 max-w-4xl">
