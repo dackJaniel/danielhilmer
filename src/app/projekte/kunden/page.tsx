@@ -9,6 +9,16 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 
+import mwr from "../../../_images/mwr.png";
+import focusdv from "../../../_images/focus-dv.png";
+import helmfriedbauer from "../../../_images/helmfried-bauer.png";
+import weilweibseinfetzt from "../../../_images/weilweibseinfetzt.png";
+import steinbrechers from "../../../_images/steinbrechers.png";
+import libertyhorses from "../../../_images/libertyhorses.png";
+import hangers from "../../../_images/hangers-1850082_1280.jpg";
+import maxwenningershop from "../../../_images/max-wenninger-shop.png";
+import maxwenninger from "../../../_images/max-wenninger.png";
+
 export default function page() {
   return (
     <main className="py-10 flex flex-col gap-8 max-w-lg md:max-w-7xl m-auto px-2">
@@ -19,12 +29,13 @@ export default function page() {
           tooltips={["WordPress"]}
           heading="Munich Wine Rebels"
           description="Entwicklung einer neuen Webseite für Munich Wine Rebels (Remake)."
+          link="https://munichwinerebels.de/"
           labels={[
             { name: "In Arbeit" },
             { name: "2023 - Jetzt" },
             { name: "Remake" },
           ]}
-          imageSrc="mwr.png"
+          imageSrc={mwr}
         />
         <Projekte
           icons={[faWordpress]}
@@ -38,7 +49,7 @@ export default function page() {
             { name: "Betreuung" },
           ]}
           link="http://focus-dv.de/"
-          imageSrc="focus-dv.png"
+          imageSrc={focusdv}
         />
         <Projekte
           icons={[faWordpress]}
@@ -51,7 +62,7 @@ export default function page() {
             { name: "Neu" },
           ]}
           link="https://hbauer-consulting.at/"
-          imageSrc="helmfried-bauer.png"
+          imageSrc={helmfriedbauer}
         />
         <Projekte
           icons={[faWordpress]}
@@ -65,7 +76,7 @@ export default function page() {
             { name: "Betreuung" },
           ]}
           link="https://www.weilweibseinfetzt.de/"
-          imageSrc="weilweibseinfetzt.png"
+          imageSrc={weilweibseinfetzt}
         />
         <Projekte
           icons={[faWordpress, faBasketShopping]}
@@ -79,7 +90,7 @@ export default function page() {
             { name: "Betreuung" },
           ]}
           link="https://steinbrechers.shop/"
-          imageSrc="steinbrechers.png"
+          imageSrc={steinbrechers}
         />
         <Projekte
           icons={[faWordpress, faBasketShopping]}
@@ -93,14 +104,14 @@ export default function page() {
             { name: "Betreuung" },
           ]}
           link="https://libertyhorses.de/"
-          imageSrc="libertyhorses.png"
+          imageSrc={libertyhorses}
         />
         <Projekte
           icons={[faWordpress, faBasketShopping]}
           tooltips={["WordPress", "WooCommerce"]}
           heading="Kleidungs Online Shop"
           description="Individueller Online Shop für einen Kleidungs Shop."
-          imageSrc="hangers-1850082_1280.jpg"
+          imageSrc={hangers}
           labels={[
             { name: "Abgeschlossen" },
             { name: "2021" },
@@ -119,7 +130,7 @@ export default function page() {
             { name: "Betreuung" },
           ]}
           link="https://shop.maxwenninger.de/"
-          imageSrc="max-wenninger-shop.png"
+          imageSrc={maxwenningershop}
         />
         <Projekte
           icons={[faHtml5, faSass, faJs, faPhp]}
@@ -133,7 +144,7 @@ export default function page() {
             { name: "Neu" },
             { name: "Betreuung" },
           ]}
-          imageSrc="max-wenninger.png"
+          imageSrc={maxwenninger}
         />
       </div>
     </main>

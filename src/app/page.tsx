@@ -16,6 +16,8 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+import profilePic from "../_images/danielhilmer.jpg";
+
 export default function Home() {
   return (
     <>
@@ -33,10 +35,10 @@ export default function Home() {
       <main className="md:h-1/2 flex flex-col md:flex-row gap-4 md:items-center max-w-2lg md:max-w-7xl m-auto p-2">
         <Image
           className="w-48 h-48 rounded-full md:w-1/2 md:h-1/2 object-cover md:rounded-2xl"
-          width={1000}
-          height={1000}
-          src="/images/danielhilmer.jpg"
-          alt="Daniel Hilmer Web Development"
+          src={profilePic}
+          alt="Daniel Hilmer - Web Development"
+          placeholder="blur"
+          priority
         />
         <div className="md:w-1/2 mr-4">
           <IconContainer>

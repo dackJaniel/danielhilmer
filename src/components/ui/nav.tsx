@@ -6,6 +6,8 @@ import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@/components/ui/button";
 
+import logo from "../../_images/logo_durch.png";
+
 function toggleMenu() {
   console.log("toggleMenu");
   const menu = document.querySelector("#menu");
@@ -17,7 +19,11 @@ const Nav = () => {
     <nav className="w-full sticky top-0 p-2 z-50">
       <div className="shadow-md py-2 px-4 rounded-full flex items-center justify-between max-w-7xl m-auto bg-white">
         <Link href="/">
-          <Image src="/images/logo_durch.png" alt="" width={40} height={40} />
+          <Image
+            src={logo}
+            alt="Daniel Hilmer Webdevelopment - Logo"
+            className="cursor-pointer w-10 h-10"
+          />
         </Link>
         <div className="md:hidden flex items-center gap-2">
           <Button asChild>

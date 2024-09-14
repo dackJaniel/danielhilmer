@@ -21,6 +21,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
+import personCongingOne from "../../../_images/person-coding-wp.webp";
+import personCondingTwo from "../../../_images/3d-art-person-coding.webp";
+
 function WordPressPage() {
   return (
     <>
@@ -52,11 +55,10 @@ function WordPressPage() {
         </Button>
         <section className="flex gap-2">
           <Image
-            src="/images/person-coding-wp.webp"
-            alt="Person Designed und Codet eine WordPress Webseite"
-            width={500}
-            height={500}
+            src={personCongingOne}
+            alt="Person Designed und Programmiert eine WordPress Webseite"
             className="rounded-lg w-1/3 object-cover md:block hidden"
+            placeholder="blur"
           />
           <Card className="md:w-2/3 w-full ">
             <CardHeader>
@@ -131,11 +133,10 @@ function WordPressPage() {
             </CardContent>
           </Card>
           <Image
-            src="/images/3d-art-person-coding.webp"
-            alt="Person Designed und Codet eine WordPress Webseite"
-            width={500}
-            height={500}
+            src={personCondingTwo}
+            alt="Person Designed und Programmiert eine WordPress Webseite"
             className="rounded-lg w-1/3 object-cover md:block hidden"
+            placeholder="blur"
           />
         </section>
         <section className="flex flex-col gap-8">
