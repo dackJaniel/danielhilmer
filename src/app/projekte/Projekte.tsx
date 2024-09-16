@@ -16,7 +16,7 @@ interface IProjekteProps {
   link?: string;
 }
 
-import defaultImg from "../../_images/cat-8198720_1280.jpg";
+import defaultImg from "../../images/cat-8198720_1280.jpg";
 
 const Projekte = ({
   imageSrc = defaultImg,
