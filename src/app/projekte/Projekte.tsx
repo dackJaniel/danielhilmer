@@ -1,13 +1,13 @@
-import IconContainer from "@/components/ui/Icons/IconContainer";
-import RoundedIcon from "@/components/ui/Icons/RoundedIcon";
+import IconContainer from "@/components/icons/IconContainer";
+import RoundedIcon from "@/components/icons/RoundedIcon";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 import React from "react";
 
 interface IProjekteProps {
-  imageSrc?: string;
+  imageSrc?: StaticImageData;
   icons?: any[];
   tooltips?: string[];
   heading: string;
@@ -16,8 +16,10 @@ interface IProjekteProps {
   link?: string;
 }
 
+import defaultImg from "../../_images/cat-8198720_1280.jpg";
+
 const Projekte = ({
-  imageSrc = "cat-8198720_1280.jpg",
+  imageSrc = defaultImg,
   icons,
   tooltips = [],
   heading,
@@ -28,11 +30,10 @@ const Projekte = ({
   return (
     <div className="border border-gray-100 bg-white rounded-lg p-4 shadow-sm flex flex-col gap-2 relative overflow-hidden">
       <Image
-        src={`/images/${imageSrc}`}
+        src={imageSrc}
         alt="not-found"
-        width={300}
-        height={300}
         className="rounded-lg object-cover w-full h-36"
+        placeholder="blur"
       />
       {link && (
         <Link
