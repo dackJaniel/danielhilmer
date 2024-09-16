@@ -31,14 +31,14 @@ export default function RootLayout({
           <Footer />
           <Toaster />
         </Provider>
+        <script
+          // strategy="lazyOnload"
+          id="usercentrics-cmp"
+          data-eu-mode="true"
+          data-settings-id="t5sF0OzEcttMs-"
+          src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
+          async></script>
       </body>
-      <Script
-        strategy="lazyOnload"
-        id="usercentrics-cmp"
-        data-eu-mode="true"
-        data-settings-id="t5sF0OzEcttMs-"
-        src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
-        async></Script>
     </html>
   );
 }

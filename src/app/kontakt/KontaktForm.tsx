@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -72,8 +71,6 @@ export function KontaktForm() {
   async function onSubmit(values: z.infer<typeof formSchema>) {
     const res = await sendEmail(values);
 
-    console.log(res);
-
     if (res.success) {
       toast({
         title: "Anfrage erfolgreich gesendet",
@@ -83,9 +80,11 @@ export function KontaktForm() {
     } else {
       toast({
         title: "Fehler beim Senden der Anfrage",
-        description: `Bitte versuche es später erneut: res.error`,
+        description: `Bitte versuche es später erneut:${res.error}`,
       });
     }
+
+    form.reset();
   }
 
   return (
