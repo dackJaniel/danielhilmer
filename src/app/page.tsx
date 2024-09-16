@@ -16,7 +16,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 
-import profilePic from "../_images/danielhilmer.jpg";
+import profilePic from "../images/danielhilmer.jpg";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",

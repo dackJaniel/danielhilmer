@@ -6,7 +6,7 @@ import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@/components/ui/button";
 
-import logo from "../../_images/logo_durch.png";
+import logo from "../../images/logo_durch.png";
 
 function toggleMenu() {
   console.log("toggleMenu");

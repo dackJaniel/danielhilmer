@@ -9,15 +9,15 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faBasketShopping } from "@fortawesome/free-solid-svg-icons";
 
-import mwr from "../../../_images/mwr.png";
-import focusdv from "../../../_images/focus-dv.png";
-import helmfriedbauer from "../../../_images/helmfried-bauer.png";
-import weilweibseinfetzt from "../../../_images/weilweibseinfetzt.png";
-import steinbrechers from "../../../_images/steinbrechers.png";
-import libertyhorses from "../../../_images/libertyhorses.png";
-import hangers from "../../../_images/hangers-1850082_1280.jpg";
-import maxwenningershop from "../../../_images/max-wenninger-shop.png";
-import maxwenninger from "../../../_images/max-wenninger.png";
+import mwr from "../../../images/mwr.png";
+import focusdv from "../../../images/focus-dv.png";
+import helmfriedbauer from "../../../images/helmfried-bauer.png";
+import weilweibseinfetzt from "../../../images/weilweibseinfetzt.png";
+import steinbrechers from "../../../images/steinbrechers.png";
+import libertyhorses from "../../../images/libertyhorses.png";
+import hangers from "../../../images/hangers-1850082_1280.jpg";
+import maxwenningershop from "../../../images/max-wenninger-shop.png";
+import maxwenninger from "../../../images/max-wenninger.png";
 
 export default function page() {
   return (

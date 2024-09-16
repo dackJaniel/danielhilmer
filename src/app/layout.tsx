@@ -6,7 +6,7 @@ import { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 
-import logo from "../_images/logo_durch.png";
+import logo from "../images/logo_durch.png";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",

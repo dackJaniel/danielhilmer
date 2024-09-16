@@ -22,8 +22,8 @@ import Link from "next/link";
 import React from "react";
 import { Metadata } from "next";
 
-import personCongingOne from "../../../_images/person-coding-wp.webp";
-import personCondingTwo from "../../../_images/3d-art-person-coding.webp";
+import personCongingOne from "../../../images/person-coding-wp.webp";
+import personCondingTwo from "../../../images/3d-art-person-coding.webp";
 
 export const metadata: Metadata = {
   title: "Ihre professionelle WordPress-Website - Daniel Hilmer",

@@ -15,14 +15,14 @@ import {
   faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
-import newsai from "../../../_images/newsai.png";
-import danielhilmer from "../../../_images/danielhilmer.png";
-import glassEffect from "../../../_images/glass-effect.png";
-import autoCalendar from "../../../_images/auto-calendar.png";
-import icongenerator from "../../../_images/icongenerator.png";
-import fokusfabrik from "../../../_images/fokusfabrik.png";
-import dogTours from "../../../_images/dog-tours.png";
-import useless from "../../../_images/useless.png";
+import newsai from "../../../images/newsai.png";
+import danielhilmer from "../../../images/danielhilmer.png";
+import glassEffect from "../../../images/glass-effect.png";
+import autoCalendar from "../../../images/auto-calendar.png";
+import icongenerator from "../../../images/icongenerator.png";
+import fokusfabrik from "../../../images/fokusfabrik.png";
+import dogTours from "../../../images/dog-tours.png";
+import useless from "../../../images/useless.png";
 
 function page() {
   return (
