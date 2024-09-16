@@ -3,6 +3,7 @@ import Footer from "@/components/ui/footer";
 import { Provider } from "@/components/provider";
 import Nav from "@/components/ui/nav";
 import { Metadata } from "next";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",
@@ -19,18 +20,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" suppressHydrationWarning>
-      <script
-        id="usercentrics-cmp"
-        data-eu-mode="true"
-        data-settings-id="t5sF0OzEcttMs-"
-        src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
-        async></script>
       <link rel="icon" href="./images/logo_durch.png" sizes="any" />
       <body className="bg-gray-100">
         <Provider>
           <Nav />
           {children}
           <Footer />
+          <Script
+            strategy="lazyOnload"
+            id="usercentrics-cmp"
+            data-eu-mode="true"
+            data-settings-id="t5sF0OzEcttMs-"
+            src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
+            async></Script>
         </Provider>
       </body>
     </html>
