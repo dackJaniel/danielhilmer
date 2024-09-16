@@ -6,8 +6,7 @@ import { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 
-import logo from "../images/logo_durch.png";
-import CookieConsent from "@/components/ui/cookieConsent";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",
@@ -29,18 +28,18 @@ export default function RootLayout({
         <Provider>
           <Nav />
           {children}
-          <CookieConsent />
           <Footer />
           <Toaster />
         </Provider>
-        {/* <script
-          // strategy="lazyOnload"
-          id="usercentrics-cmp"
-          data-eu-mode="true"
-          data-settings-id="t5sF0OzEcttMs-"
-          src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
-          async></script> */}
       </body>
+      <GoogleAnalytics gaId="G-3EZ6RJSYKF" />
+      <Script
+        strategy="lazyOnload"
+        id="usercentrics-cmp"
+        data-eu-mode="true"
+        data-settings-id="t5sF0OzEcttMs-"
+        src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
+        async></Script>
     </html>
   );
 }
