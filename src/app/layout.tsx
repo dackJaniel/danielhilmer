@@ -29,6 +29,13 @@ export default function RootLayout({
           <Nav />
           {children}
           <Footer />
+          <Script
+            strategy="lazyOnload"
+            id="usercentrics-cmp"
+            data-eu-mode="true"
+            data-settings-id="t5sF0OzEcttMs-"
+            src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
+            async></Script>
           <Toaster />
         </Provider>
       </body>
