@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 
 import logo from "../images/logo_durch.png";
+import CookieConsent from "@/components/ui/cookieConsent";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",
@@ -28,16 +29,17 @@ export default function RootLayout({
         <Provider>
           <Nav />
           {children}
+          <CookieConsent />
           <Footer />
           <Toaster />
         </Provider>
-        <script
+        {/* <script
           // strategy="lazyOnload"
           id="usercentrics-cmp"
           data-eu-mode="true"
           data-settings-id="t5sF0OzEcttMs-"
           src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
-          async></script>
+          async></script> */}
       </body>
     </html>
   );

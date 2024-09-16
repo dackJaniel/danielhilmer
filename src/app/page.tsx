@@ -30,11 +30,10 @@ export default function Home() {
   return (
     <main className="md:h-1/2 flex flex-col md:flex-row gap-4 md:items-center max-w-2lg md:max-w-7xl m-auto p-2">
       <Image
-        className="w-48 h-48 rounded-full md:w-1/2 md:h-1/2 object-cover md:rounded-2xl"
+        className="w-48 h-48 rounded-full md:w-1/2 md:h-[80vh] object-cover md:rounded-2xl"
         src={profilePic}
         alt="Daniel Hilmer - Web Development"
         placeholder="blur"
-        priority
       />
       <div className="md:w-1/2 mr-4">
         <IconContainer>
@@ -49,7 +48,7 @@ export default function Home() {
         <h1 className="text-4xl sm:text-5xl lg:text-7xl">
           Freiberufliche JavaScript Entwicklung
         </h1>
-        <div className="my-8 bg-white shadow-sm p-4 md:p-8 rounded-lg flex gap-4 items-start">
+        <div className="my-8 bg-white shadow-sm p-4 md:p-8 rounded-lg flex gap-4 items-start w-full">
           <FontAwesomeIcon
             className="min-w-5 max-w-5 h-5 text-slate-900 hidden sm:block"
             icon={faInfoCircle}
