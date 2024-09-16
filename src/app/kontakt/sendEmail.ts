@@ -1,7 +1,16 @@
 "use server"
 
 import nodemailer, { TransportOptions } from "nodemailer";
-import { IFormValues } from "./page";
+
+type IProps = {
+    firstName: string,
+    lastName: string,
+    business: string,
+    email: string,
+    thema: string,
+    message: string,
+    privacy: boolean,
+}
 
 interface AddTransportOptions extends TransportOptions {
     host: string;
@@ -17,7 +26,7 @@ const transporter = nodemailer.createTransport({
     },
 } as AddTransportOptions);
 
-export async function sendEmail({ firstName, lastName, email, message }: IFormValues) {
+export async function sendEmail({ firstName, lastName, business, email, thema, message }: IProps) {
     transporter.verify((error) => {
         if (error) {
             console.error("Error connecting to SMTP server", error);
@@ -30,10 +39,9 @@ export async function sendEmail({ firstName, lastName, email, message }: IFormVa
             from: "mail@danielhilmer.de",
             to: "mail@danielhilmer.de",
             subject: `Neue Anfrage von ${firstName} ${lastName}`,
-            text: `Neue Anfrage von ${firstName} ${lastName}. \n\n Kontakt: ${email} \n\n Nachricht: ${message} `,
-            html: `<h1>Neue Anfrage von ${firstName} ${lastName}.</h1><br><p>Kontakt: ${email}</p><br><p>Nachricht: ${message}</p>`,
+            text: `Neue Anfrage von ${firstName} ${lastName}. \n\n Kontakt: ${email} \n\n Business: ${business} \n\n Thema: ${thema} \n\n Nachricht: ${message}.`,
+            html: `<h1>Neue Anfrage von ${firstName} ${lastName}.</h1><br><p>Kontakt: ${email}</p><br><p>Business: ${business}</p><br><p>Thema: ${thema}</p><br><p>Nachricht: ${message}</p>`,
         });
-        console.log("Email sent");
         return { success: true };
     } catch (error: any) {
         console.error("Error sending email", error);

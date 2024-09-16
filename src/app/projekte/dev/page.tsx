@@ -15,6 +15,15 @@ import {
   faUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 
+import newsai from "../../../_images/newsai.png";
+import danielhilmer from "../../../_images/danielhilmer.png";
+import glassEffect from "../../../_images/glass-effect.png";
+import autoCalendar from "../../../_images/auto-calendar.png";
+import icongenerator from "../../../_images/icongenerator.png";
+import fokusfabrik from "../../../_images/fokusfabrik.png";
+import dogTours from "../../../_images/dog-tours.png";
+import useless from "../../../_images/useless.png";
+
 function page() {
   return (
     <main className="py-10 flex flex-col gap-8 max-w-lg md:max-w-7xl m-auto px-2">
@@ -45,7 +54,7 @@ function page() {
           heading="Unbiased News"
           description="Bachelor Projekt: Entwicklung einer deutschsprachigen Künstlichen Intelligenz zur automatischen News-Analyse und politischen Einordnung für eine Unbiased News Webapplikation"
           labels={[{ name: "In Arbeit" }, { name: "Bachelor Projekt" }]}
-          imageSrc="newsai.png"
+          imageSrc={newsai}
         />
         {/* Daniel Hilmer */}
         <Projekte
@@ -54,7 +63,7 @@ function page() {
           heading="Daniel Hilmer"
           description="Meine eigene Website, die ich mit NextJS und TailwindCSS umgesetzt habe."
           labels={[{ name: "In Arbeit" }]}
-          imageSrc="danielhilmer.png"
+          imageSrc={danielhilmer}
         />
         {/* Window Effect Header */}
         <Projekte
@@ -63,7 +72,7 @@ function page() {
           heading="Window effect header"
           description="Open Source Projekt: Window-Glass Effect Header, umgesetzt mit NextJS und TailwindCSS."
           link="/projekte/dev/window-effect-header"
-          imageSrc="glass-effect.png"
+          imageSrc={glassEffect}
           labels={[
             { name: "Abgeschlossen" },
             {
@@ -96,7 +105,7 @@ function page() {
               icon: faUpRightFromSquare,
             },
           ]}
-          imageSrc="auto-calendar.png"
+          imageSrc={autoCalendar}
         />
         {/* Icon Generator */}
         <Projekte
@@ -113,7 +122,7 @@ function page() {
           heading="Icon Generator"
           description="Ein Icon Generator, den ich mit NextJS umgesetzt habe. Der Generator nutzt die OpenAI API, um aus einem Text ein Icon zu generieren."
           labels={[{ name: "In Arbeit" }]}
-          imageSrc="icongenerator.png"
+          imageSrc={icongenerator}
         />
         {/* Fokusfabrik */}
         <Projekte
@@ -126,7 +135,7 @@ function page() {
             "NextJS",
             "Login (NextAuth)",
           ]}
-          imageSrc="fokusfabrik.png"
+          imageSrc={fokusfabrik}
           heading="fokusfabrik"
           link="https://fokusfabrik.media/"
           description="Dieses Projekt konnte ich während meines Studiums bei der SAE in München umsetzen."
@@ -143,7 +152,7 @@ function page() {
           ]}
           heading="Dog Tours"
           description="Fullstack Web-App, für eine Hundeschule, die Hundetouren (z.B. durch den Wald) anbieten möchte (Wie Geo cashing für Hunde), um das Gassi gehen interessanter zu machen."
-          imageSrc="dog-tours.png"
+          imageSrc={dogTours}
           labels={[
             { name: "Abgeschlossen" },
             { name: "Konzept" },
@@ -162,7 +171,7 @@ function page() {
           tooltips={["UI & UX Design", "HTML5", "CSS3/ SASS", "JavaScript"]}
           heading="UseLess"
           description="Dies ist ein Projekt, welches sich über das erste Jahr meines Studiums an der SAE in München erstreckt hat. Zuerst habe ich das Design erstellt um es daraufhin mit HTML, CSS und später auch mit JavaScript umzusetzen."
-          imageSrc="useless.png"
+          imageSrc={useless}
           labels={[
             { name: "Abgeschlossen" },
             { name: "Studium" },
