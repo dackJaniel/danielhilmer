@@ -1,12 +1,13 @@
 import "./globals.css";
-import Footer from "@/components/ui/footer";
+import Footer from "@/components/Footer";
 import { Provider } from "@/components/provider";
-import Nav from "@/components/ui/nav";
+import Nav from "@/components/Nav";
 import { Metadata } from "next";
 import { Toaster } from "@/components/ui/toaster";
 import Script from "next/script";
 
 import { GoogleAnalytics } from "@next/third-parties/google";
+import Matomo from "@/components/Matomo";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",
@@ -35,18 +36,21 @@ export default function RootLayout({
             data-eu-mode="true"
             data-settings-id="t5sF0OzEcttMs-"
             src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
-            async></Script>
+            async
+          ></Script>
           <Toaster />
         </Provider>
       </body>
-      <GoogleAnalytics gaId="G-3EZ6RJSYKF" />
+      {process.env.MATOMO && <Matomo />}
+      {/* <GoogleAnalytics gaId="G-3EZ6RJSYKF" />
       <Script
         strategy="lazyOnload"
         id="usercentrics-cmp"
         data-eu-mode="true"
         data-settings-id="t5sF0OzEcttMs-"
         src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
-        async></Script>
+        async
+      ></Script> */}
     </html>
   );
 }

@@ -1,97 +1,83 @@
-import IconContainer from "@/components/icons/IconContainer";
-import RoundedIcon from "@/components/icons/RoundedIcon";
-import { Button } from "@/components/ui/button";
-import {
-  faCss3,
-  faGithub,
-  faHtml5,
-  faJs,
-  faLinkedinIn,
-  faNodeJs,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image";
-import Link from "next/link";
 import { Metadata } from "next";
 
-import profilePic from "../images/danielhilmer.jpg";
+import CheckIcon from "@/components/icons/CheckIcon";
+import { SmallForm } from "../components/SmallForm";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import WhatsAppIcon from "@/components/icons/WhatsappIcon";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",
   description:
     "Freiberuflicher Webentwickler spezialisiert auf JavaScript-Frameworks wie React, NodeJS und NextJS.",
   keywords:
-    "Webentwicklung, JavaScript, React, NodeJS, NextJS, Prisma, SQL, NoSQL, HTML5, CSS3, SCSS, Tailwind",
+    "Skalierbare und leistungsstarke SaaS-Lösungen für Mittelständische Unternehmen, Maßgeschneiderte Webanwendungen für Ihr Unternehmen, Webentwicklung, Webanwendungen, SaaS-Lösungen, JavaScript-Frameworks, React, NodeJS, NextJS, Freiberuflicher Webentwickler, Webentwicklung für Unternehmen, Webentwicklung für Mittelstand, Webentwicklung für Startups, Webentwicklung für kleine Unternehmen, Webentwicklung für große Unternehmen, Webentwicklung für E-Commerce, Webentwicklung für B2B, Webentwicklung für B2C",
 };
 
 export default function Home() {
   return (
-    <main className="md:h-1/2 flex flex-col md:flex-row gap-4 md:items-center max-w-2lg md:max-w-7xl m-auto p-2">
-      <Image
-        className="w-48 h-48 rounded-full md:w-1/2 md:h-[80vh] object-cover md:rounded-2xl"
-        src={profilePic}
-        alt="Daniel Hilmer - Web Development"
-        placeholder="blur"
-      />
-      <div className="md:w-1/2 mr-4">
-        <IconContainer>
-          <RoundedIcon icon={faHtml5} tooltip="HTML5" />
-          <RoundedIcon icon={faCss3} tooltip="CSS3, SCSS, Tailwind" />
-          <RoundedIcon icon={faGithub} tooltip="GitHub" />
-          <RoundedIcon icon={faJs} tooltip="JavaScript, TypeScript" />
-          <RoundedIcon icon={faReact} tooltip="React, NextJS" />
-          <RoundedIcon icon={faNodeJs} tooltip="NodeJS" />
-          <RoundedIcon icon={faDatabase} tooltip="SQL, NoSQL, Prisma" />
-        </IconContainer>
-        <h1 className="text-4xl sm:text-5xl lg:text-7xl">
-          Freiberufliche JavaScript Entwicklung
-        </h1>
-        <div className="my-8 bg-white shadow-sm p-4 md:p-8 rounded-lg flex gap-4 items-start w-full">
-          <FontAwesomeIcon
-            className="min-w-5 max-w-5 h-5 text-slate-900 hidden sm:block"
-            icon={faInfoCircle}
-          />
-          <p>
-            Hi, ich bin <span className="font-bold">Daniel Hilmer</span>, ein
-            leidenschaftlicher Webentwickler, der sich auf die Erstellung
-            ansprechender Websites und innovativer Webanwendungen spezialisiert
-            hat. Mit einem starken Fokus auf
-            <span className="font-bold"> JavaScript-Frameworks</span> wie React,
-            NodeJS und NextJS, kombiniert mit einem fundierten Verständnis für
-            modernste Technologien, bringe ich eine kreative und effektive
-            Herangehensweise an jedes Projekt.
-          </p>
+    <div className="max-w-2lg md:max-w-7xl m-auto p-2">
+      <div className="md:h-1/2 flex flex-col-reverse md:flex-row-reverse gap-4 my-10 md:my-20">
+        <div className="md:w-1/3">
+          <section className="bg-green-200 border-2 p-4 border-green-300 rounded-md flex items-center justify-between my-4">
+            {/* <h4 className="font-bold">Jetzt per WhatsApp kontaktieren</h4> */}
+            <Button asChild variant="outline">
+              <Link href="" className="flex gap-2 w-full">
+                <WhatsAppIcon className="w-4 h-4" /> Auf WhatsApp kontaktieren
+              </Link>
+            </Button>
+          </section>
+          <div className="bg-white rounded-xl p-8 shadow-sm relative overflow-visible">
+            <h4 className="font-bold text-2xl mb-4">Kostenlos anfragen!</h4>
+            <SmallForm />
+          </div>
         </div>
-        <div className="flex justify-between gap-2">
-          <div className="flex gap-2 items-center">
-            <Button asChild>
-              <Link href="/kontakt">Kontakt aufnehmen</Link>
-            </Button>
-          </div>
-          <div className="flex justify-end items-center gap-2">
-            <Button asChild variant="outline">
-              <Link
-                href="https://github.com/dackJaniel"
-                target="_blank"
-                className="flex gap-2">
-                <span className="hidden sm:block">Github</span>{" "}
-                <FontAwesomeIcon icon={faGithub} />
-              </Link>
-            </Button>
-            <Button asChild variant="outline">
-              <Link
-                href="https://www.linkedin.com/in/daniel-hilmer-038390206/"
-                target="_blank"
-                className="flex gap-2">
-                <span className="hidden sm:block">LinkedIn</span>{" "}
-                <FontAwesomeIcon icon={faLinkedinIn} />
-              </Link>
-            </Button>
-          </div>
+        <div className="md:w-2/3 mr-4">
+          <header>
+            <h2 className="text-primary font-bold uppercase mt-4 mb-2">
+              Maßgeschneiderte Webanwendungen für Ihr Unternehmen
+            </h2>
+            <h1 className="text-4xl sm:text-4xl lg:text-6xl mb-5">
+              Skalierbare und leistungsstarke{" "}
+              <span className="underline underline-offset-4 text-primary">
+                SaaS-Lösungen
+              </span>{" "}
+              für Mittelständische Unternehmen
+            </h1>
+          </header>
+          <main>
+            <p className="mt-2 mb-10 text-lg text-muted-foreground">
+              Wir bieten maßgeschneiderte Webentwicklungslösungen für
+              mittelständische Unternehmen, die nach mehr als nur einer
+              Standard-Webseite suchen. Von der Erstellung von dynamischen
+              Webseiten bis hin zu komplexen Webanwendungen unterstützen wir Sie
+              dabei, Ihr Business digital zu transformieren.
+            </p>
+            <div className="flex gap-2 flex-wrap">
+              <div className="flex gap-2 rounded-full px-4 py-1 bg-white shadow-sm items-center text-sm">
+                <CheckIcon className="w-4 h-4 text-green-600" /> Individuelle
+                Webentwicklung
+              </div>
+              <div className="flex gap-2 rounded-full px-4 py-1 bg-white shadow-sm items-center text-sm">
+                <CheckIcon className="w-4 h-4 text-green-600" /> Skalierbare
+                Web-Apps
+              </div>
+              <div className="flex gap-2 rounded-full px-4 py-1 bg-white shadow-sm items-center text-sm">
+                <CheckIcon className="w-4 h-4 text-green-600" />
+                Sichere & performante Plattformen
+              </div>
+              <div className="flex gap-2 rounded-full px-4 py-1 bg-white shadow-sm items-center text-sm">
+                <CheckIcon className="w-4 h-4 text-green-600" />
+                KI-gestütze Lösungen
+              </div>
+              <div className="flex gap-2 rounded-full px-4 py-1 bg-white shadow-sm items-center text-sm">
+                <CheckIcon className="w-4 h-4 text-green-600" />
+                Professionelle & langfristige Zusammenarbeit
+              </div>
+            </div>
+          </main>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -158,17 +158,14 @@ export function KontaktForm() {
                   <SelectItem value="Allgemeines">
                     Allgemeine Anfrage
                   </SelectItem>
-                  <SelectItem value="Individuell (React)">
-                    Individuelle Webseite oder Web-App
+                  <SelectItem value="Individuell-Webseite">
+                    Individuelle Webseite
                   </SelectItem>
-                  <SelectItem value="WordPress Webseite">
-                    WordPress Webseite
+                  <SelectItem value="WordPress-WebApp">
+                    Individuelle WebApp
                   </SelectItem>
-                  <SelectItem value="WooCommerce">
-                    WordPress Online Shop (WooCommerce)
-                  </SelectItem>
-                  <SelectItem value="WordPress Custom">
-                    WordPress Custom
+                  <SelectItem value="CMS">
+                    Content Management System (z.B. WordPress)
                   </SelectItem>
                   <SelectItem value="Etwas anderes">Etwas anderes</SelectItem>
                 </SelectContent>
