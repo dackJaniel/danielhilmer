@@ -22,7 +22,10 @@ export default function Home() {
           <section className="bg-green-200 border-2 p-4 border-green-300 rounded-md flex items-center justify-between my-4">
             {/* <h4 className="font-bold">Jetzt per WhatsApp kontaktieren</h4> */}
             <Button asChild variant="outline">
-              <Link href="" className="flex gap-2 w-full">
+              <Link
+                href="https://wa.me/message/SUK6VOGPWX2HJ1"
+                className="flex gap-2 w-full"
+              >
                 <WhatsAppIcon className="w-4 h-4" /> Auf WhatsApp kontaktieren
               </Link>
             </Button>
