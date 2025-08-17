@@ -1,5 +1,5 @@
-import React from "react";
-import Projekte from "../Projekte";
+import React from 'react';
+import Projekte from '../Projekte';
 import {
   faCss3,
   faFigma,
@@ -9,41 +9,53 @@ import {
   faPython,
   faReact,
   faStripe,
-} from "@fortawesome/free-brands-svg-icons";
+} from '@fortawesome/free-brands-svg-icons';
 import {
   faBrain,
   faLock,
+  faPhone,
   faUpRightFromSquare,
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 
-import newsai from "../../../images/newsai.png";
-import danielhilmer from "../../../images/danielhilmer.png";
-import glassEffect from "../../../images/glass-effect.png";
-import autoCalendar from "../../../images/auto-calendar.png";
-import icongenerator from "../../../images/icongenerator.png";
-import fokusfabrik from "../../../images/fokusfabrik.png";
-import dogTours from "../../../images/dog-tours.png";
-import useless from "../../../images/useless.png";
-import stampal from "../../../images/stampal.jpg";
+import newsai from '../../../images/newsai.png';
+import danielhilmer from '../../../images/danielhilmer.png';
+import glassEffect from '../../../images/glass-effect.png';
+import autoCalendar from '../../../images/auto-calendar.png';
+import icongenerator from '../../../images/icongenerator.png';
+import fokusfabrik from '../../../images/fokusfabrik.png';
+import dogTours from '../../../images/dog-tours.png';
+import useless from '../../../images/useless.png';
+import stampal from '../../../images/stampal.jpg';
+import exchange from '../../../images/exchange.png';
 
 const projectData = [
   {
+    icons: [faPhone, faCss3, faReact],
+    tooltips: ['PWA', 'TailwindCSS', 'NextJS'],
+    heading: 'Currency Exchange',
+    description:
+      'Eine Webanwendung zur Währungsumrechnung, die mit NextJS, TailwindCSS und Shadcn entwickelt wurde. Es ist als PWA verfügbar.',
+    labels: [{ name: 'Abgeschlossen' }, { name: 'AI' }],
+    imageSrc: exchange,
+    link: 'https://exchange.danielhilmer.de/',
+  },
+  {
     icons: [faHtml5, faCss3, faJs, faNodeJs, faReact, faLock, faStripe],
     tooltips: [
-      "HTML5",
-      "TailwindCSS",
-      "JavaScript",
-      "NodeJS",
-      "NextJS",
-      "Login (NextAuth)",
-      "Stripe Zahlungen",
+      'HTML5',
+      'TailwindCSS',
+      'JavaScript',
+      'NodeJS',
+      'NextJS',
+      'Login (NextAuth)',
+      'Stripe Zahlungen',
     ],
-    heading: "Stampal",
+    heading: 'Stampal',
     description:
-      "Stampal ist eine Webapplikation, die es Unternehmen ermöglicht, von Physischen Stempelkarten auf digitale umzustellen. Die App wurde mit NextJS und TailwindCSS umgesetzt. Die Backend-Logik wurde mit NodeJS und Prisma realisiert. Die App nutzt Stripe für die Zahlungsabwicklung und NextAuth für die Authentifizierung.",
-    labels: [{ name: "In Arbeit" }],
+      'Stampal ist eine Webapplikation, die es Unternehmen ermöglicht, von Physischen Stempelkarten auf digitale umzustellen. Die App wurde mit NextJS und TailwindCSS umgesetzt. Die Backend-Logik wurde mit NodeJS und Prisma realisiert. Die App nutzt Stripe für die Zahlungsabwicklung und NextAuth für die Authentifizierung.',
+    labels: [{ name: 'In Arbeit' }],
     imageSrc: stampal,
-    link: "https://web.stampal.app/",
+    link: 'https://web.stampal.app/',
   },
   {
     icons: [
@@ -57,156 +69,146 @@ const projectData = [
       faPython,
     ],
     tooltips: [
-      "HTML5",
-      "TailwindCSS",
-      "JavaScript",
-      "NodeJS",
-      "NextJS",
-      "Login (NextAuth)",
-      "KI",
-      "Python",
+      'HTML5',
+      'TailwindCSS',
+      'JavaScript',
+      'NodeJS',
+      'NextJS',
+      'Login (NextAuth)',
+      'KI',
+      'Python',
     ],
-    heading: "Unbiased News",
+    heading: 'Unbiased News',
     description:
-      "Bachelor Projekt: Entwicklung einer deutschsprachigen Künstlichen Intelligenz zur automatischen News-Analyse und politischen Einordnung für eine Unbiased News Webapplikation.",
+      'Bachelor Projekt: Entwicklung einer deutschsprachigen Künstlichen Intelligenz zur automatischen News-Analyse und politischen Einordnung für eine Unbiased News Webapplikation.',
     labels: [
-      { name: "Abgeschlossen" },
-      { name: "Bachelor Projekt" },
-      { name: "Konzept" },
-      { name: "Unveröffentlicht" },
+      { name: 'Abgeschlossen' },
+      { name: 'Bachelor Projekt' },
+      { name: 'Konzept' },
+      { name: 'Unveröffentlicht' },
     ],
     imageSrc: newsai,
   },
   {
     icons: [faHtml5, faCss3, faJs, faNodeJs, faReact],
-    tooltips: ["HTML5", "TailwindCSS", "JavaScript", "NodeJS", "NextJS"],
-    heading: "Daniel Hilmer",
+    tooltips: ['HTML5', 'TailwindCSS', 'JavaScript', 'NodeJS', 'NextJS'],
+    heading: 'Daniel Hilmer',
     description:
-      "Diese Website, die mit NextJS und TailwindCSS umgesetzt wurde.",
-    labels: [{ name: "In Arbeit" }],
+      'Diese Website, die mit NextJS und TailwindCSS umgesetzt wurde.',
+    labels: [{ name: 'In Arbeit' }],
     imageSrc: danielhilmer,
   },
   {
     icons: [faHtml5, faCss3, faJs, faReact],
-    tooltips: ["HTML5", "TailwindCSS", "JavaScript", "NextJS"],
-    heading: "Window effect header",
+    tooltips: ['HTML5', 'TailwindCSS', 'JavaScript', 'NextJS'],
+    heading: 'Window effect header',
     description:
-      "Open Source Projekt: Window-Glass Effect Header, umgesetzt mit NextJS und TailwindCSS.",
-    link: "/projekte/dev/window-effect-header",
+      'Open Source Projekt: Window-Glass Effect Header, umgesetzt mit NextJS und TailwindCSS.',
+    link: '/projekte/dev/window-effect-header',
     imageSrc: glassEffect,
     labels: [
-      { name: "Abgeschlossen" },
+      { name: 'Abgeschlossen' },
       {
-        name: "GitHub",
-        link: "https://github.com/dackJaniel/window-effect-header",
+        name: 'GitHub',
+        link: 'https://github.com/dackJaniel/window-effect-header',
         icon: faUpRightFromSquare,
       },
-      { name: "Open Source" },
+      { name: 'Open Source' },
     ],
   },
   {
     icons: [faHtml5, faCss3, faJs, faNodeJs, faReact, faLock],
     tooltips: [
-      "HTML5",
-      "TailwindCSS",
-      "JavaScript",
-      "NodeJS",
-      "NextJS",
-      "Login (NextAuth)",
+      'HTML5',
+      'TailwindCSS',
+      'JavaScript',
+      'NodeJS',
+      'NextJS',
+      'Login (NextAuth)',
     ],
-    heading: "Auto Kalender",
+    heading: 'Auto Kalender',
     description:
-      "Eine Kalender-App, die ich mit NextJS umgesetzt habe. Die Webapp ermöglicht es, einen Persönlichen Kalender zu erstellen. Unterstützt wird der Benutzer durch nützliche KI Funktionen.",
-    link: "https://auto-calendar.vercel.app/",
-    labels: [
-      { name: "In Arbeit" },
-      { name: "Konzept" },
-      { name: "Unveröffentlicht" },
-      {
-        name: "GitHub",
-        link: "https://github.com/dackJaniel/auto-calendar",
-        icon: faUpRightFromSquare,
-      },
-    ],
+      'Eine Kalender-App, die ich mit NextJS umgesetzt habe. Die Webapp ermöglicht es, einen Persönlichen Kalender zu erstellen. Unterstützt wird der Benutzer durch nützliche KI Funktionen.',
+    labels: [{ name: 'Konzept' }, { name: 'Unveröffentlicht' }],
     imageSrc: autoCalendar,
   },
   {
     icons: [faHtml5, faCss3, faJs, faNodeJs, faReact, faLock, faBrain],
     tooltips: [
-      "HTML5",
-      "TailwindCSS",
-      "JavaScript",
-      "NodeJS",
-      "NextJS",
-      "Login (NextAuth)",
-      "KI (OpenAI API)",
+      'HTML5',
+      'TailwindCSS',
+      'JavaScript',
+      'NodeJS',
+      'NextJS',
+      'Login (NextAuth)',
+      'KI (OpenAI API)',
     ],
-    heading: "Icon Generator",
+    heading: 'Icon Generator',
     description:
-      "Ein Icon Generator, den ich mit NextJS umgesetzt habe. Der Generator nutzt die OpenAI API, um aus einem Text ein Icon zu generieren.",
+      'Ein Icon Generator, den ich mit NextJS umgesetzt habe. Der Generator nutzt die OpenAI API, um aus einem Text ein Icon zu generieren.',
     labels: [
-      { name: "Abgeschlossen" },
-      { name: "Konzept" },
-      { name: "Unveröffentlicht" },
+      { name: 'Abgeschlossen' },
+      { name: 'Konzept' },
+      { name: 'Unveröffentlicht' },
     ],
     imageSrc: icongenerator,
   },
   {
     icons: [faHtml5, faCss3, faJs, faNodeJs, faReact, faLock],
     tooltips: [
-      "HTML5",
-      "TailwindCSS",
-      "JavaScript",
-      "NodeJS",
-      "NextJS",
-      "Login (NextAuth)",
+      'HTML5',
+      'TailwindCSS',
+      'JavaScript',
+      'NodeJS',
+      'NextJS',
+      'Login (NextAuth)',
     ],
     imageSrc: fokusfabrik,
-    heading: "fokusfabrik",
-    link: "https://fokusfabrik.media/",
+    heading: 'fokusfabrik',
+    link: 'https://fokusfabrik.media/',
     description:
-      "Dieses Projekt konnte ich während meines Studiums bei der SAE in München umsetzen.",
+      'Dieses Projekt konnte ich während meines Studiums bei der SAE in München umsetzen.',
     labels: [
-      { name: "Abgeschlossen" },
-      { name: "Studium" },
-      { name: "Unveröffentlicht" },
+      { name: 'Abgeschlossen' },
+      { name: 'Studium' },
+      { name: 'Unveröffentlicht' },
     ],
   },
   {
     icons: [faHtml5, faCss3, faJs, faNodeJs, faLock],
     tooltips: [
-      "HTML5",
-      "CSS3/ SASS",
-      "JavaScript",
-      "NodeJS",
-      "Login (Home made)",
+      'HTML5',
+      'CSS3/ SASS',
+      'JavaScript',
+      'NodeJS',
+      'Login (Home made)',
     ],
-    heading: "Dog Tours",
+    heading: 'Dog Tours',
     description:
-      "Fullstack Web-App, für eine Hundeschule, die Hundetouren (z.B. durch den Wald) anbieten möchte (Wie Geo cashing für Hunde), um das Gassi gehen interessanter zu machen.",
+      'Fullstack Web-App, für eine Hundeschule, die Hundetouren (z.B. durch den Wald) anbieten möchte (Wie Geo cashing für Hunde), um das Gassi gehen interessanter zu machen.',
     imageSrc: dogTours,
     labels: [
-      { name: "Abgeschlossen" },
-      { name: "Konzept" },
-      { name: "Unveröffentlicht" },
-      { name: "Studium" },
+      { name: 'Abgeschlossen' },
+      { name: 'Konzept' },
+      { name: 'Unveröffentlicht' },
+      { name: 'Studium' },
     ],
   },
   {
     icons: [faFigma, faHtml5, faCss3, faJs],
-    tooltips: ["UI & UX Design", "HTML5", "CSS3/ SASS", "JavaScript"],
-    heading: "UseLess",
+    tooltips: ['UI & UX Design', 'HTML5', 'CSS3/ SASS', 'JavaScript'],
+    heading: 'UseLess',
     description:
-      "Dies ist ein Projekt, welches sich über das erste Jahr meines Studiums an der SAE in München erstreckt hat. Zuerst habe ich das Design erstellt um es daraufhin mit HTML, CSS und später auch mit JavaScript umzusetzen.",
+      'Dies ist ein Projekt, welches sich über das erste Jahr meines Studiums an der SAE in München erstreckt hat. Zuerst habe ich das Design erstellt um es daraufhin mit HTML, CSS und später auch mit JavaScript umzusetzen.',
     imageSrc: useless,
     labels: [
-      { name: "Abgeschlossen" },
-      { name: "Konzept" },
-      { name: "Studium" },
-      { name: "Unveröffentlicht" },
+      { name: 'Abgeschlossen' },
+      { name: 'Konzept' },
+      { name: 'Studium' },
+      { name: 'Unveröffentlicht' },
       {
-        name: "GitHub",
-        link: "https://github.com/dackJaniel/useLess",
+        name: 'GitHub',
+        link: 'https://github.com/dackJaniel/useLess',
         icon: faUpRightFromSquare,
       },
     ],
@@ -215,9 +217,9 @@ const projectData = [
 
 function page() {
   return (
-    <main className="py-10 flex flex-col gap-8 max-w-lg md:max-w-7xl m-auto px-2">
-      <h1 className="text-7xl">Development Projekte</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+    <main className='py-10 flex flex-col gap-8 max-w-lg md:max-w-7xl m-auto px-2'>
+      <h1 className='text-7xl'>Development Projekte</h1>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
         {projectData.map((project, index) => (
           <Projekte
             key={index}
