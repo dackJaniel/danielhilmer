@@ -2,7 +2,6 @@
 
 import IconContainer from "@/components/icons/IconContainer";
 import RoundedIcon from "@/components/icons/RoundedIcon";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -29,13 +28,14 @@ interface IProjekteProps {
   heading: string;
   description: string;
   labels?: { name: string; link?: string; icon?: any }[];
-  link?: string;
+  link?: { href: string; text: string };
 }
 
-import defaultImg from "../../images/cat-8198720_1280.jpg";
+import defaultImg from "../images/cat-8198720_1280.jpg";
 import { Button } from "@/components/ui/button";
+import { ScrollArea } from "@/components/ui/scroll-area";
 
-const Projekte = ({
+const ProjectCard = ({
   imageSrc = defaultImg,
   icons,
   tooltips = [],
@@ -97,15 +97,15 @@ const Projekte = ({
                 {label.name}{" "}
                 {label.icon && <FontAwesomeIcon icon={label.icon} />}
               </span>
-            )
+            ),
           )}
         </div>
       )}
-      {link && (
+      {link?.href && (
         <div className="mt-4">
           <Button asChild variant="outline">
-            <Link href={link} target="_blank">
-              Webseite besuchen
+            <Link href={link.href} target="_blank">
+              {link.text}
             </Link>
           </Button>
         </div>
@@ -119,17 +119,10 @@ const Projekte = ({
         src={imageSrc}
         alt="not-found"
         className="rounded-lg object-cover w-full h-36"
-        placeholder="blur"
+        width={300}
+        height={200}
       />
-      {link && (
-        <Link
-          href={`${link}`}
-          target="_blank"
-          className="absolute top-0 right-0 rounded-md bg-white p-3 hover:text-cyan-900 transition-colors"
-        >
-          <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-        </Link>
-      )}
+
       <IconContainer gap="sm">
         {icons?.map((icon, index) => (
           <RoundedIcon
@@ -144,13 +137,17 @@ const Projekte = ({
         <h3 className="text-lg">{heading}</h3>
         <p>
           {shortDescription}
-          {isLongDescription && (
+          {(isLongDescription || link) && (
             <>
               {isMobile ? (
                 <Drawer open={isOpen} onOpenChange={setIsOpen}>
                   <DrawerTrigger asChild>
-                    <Button variant={"link"} onClick={() => setIsOpen(true)}>
-                      Weiter lesen...
+                    <Button
+                      className="p-0 w-full"
+                      variant={"outline"}
+                      onClick={() => setIsOpen(true)}
+                    >
+                      Weiter Informationen
                     </Button>
                   </DrawerTrigger>
                   <DrawerContent>
@@ -165,18 +162,22 @@ const Projekte = ({
                 </Drawer>
               ) : (
                 <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                  <button
-                    className="text-cyan-700 hover:text-cyan-900 font-medium ml-1"
+                  <Button
+                    className="mt-4 w-full"
+                    variant={"outline"}
                     onClick={() => setIsOpen(true)}
                   >
-                    Weiter lesen...
-                  </button>
+                    Weitere Informationen
+                  </Button>
                   <DialogContent className="sm:max-w-md">
                     <DialogHeader>
                       <DialogTitle>{heading}</DialogTitle>
                     </DialogHeader>
-                    <div className="p-4">
-                      <p className="mb-4">{description}</p>
+                    <div>
+                      <ScrollArea className="h-[200px] w-full mb-4">
+                        {description}
+                      </ScrollArea>
+
                       {renderDetailsContent()}
                     </div>
                   </DialogContent>
@@ -189,19 +190,9 @@ const Projekte = ({
       <div className="flex gap-1 flex-wrap">
         {/* FIXME: Code Duplication */}
         {/* TODO: Colors */}
-        {labels?.map((label, index) =>
+        {/*{labels?.map((label, index) =>
           label.link ? (
-            <Link
-              key={`${label.name}-${index}`}
-              href={label.link}
-              target="_blank"
-              className="bg-slate-100 py-0 px-3 rounded-full cursor-pointer hover:bg-slate-200 transition-colors text-sm"
-            >
-              <span key={`${label.name}-${index}`}>
-                {label.name}{" "}
-                {label.icon && <FontAwesomeIcon icon={label.icon} />}
-              </span>
-            </Link>
+            <div key={index}>{label.name}</div>
           ) : (
             <span
               key={`${label.name}-${index}`}
@@ -209,11 +200,11 @@ const Projekte = ({
             >
               {label.name} {label.icon && <FontAwesomeIcon icon={label.icon} />}
             </span>
-          )
-        )}
+          ),
+        )}*/}
       </div>
     </div>
   );
 };
 
-export default Projekte;
+export default ProjectCard;

@@ -42,12 +42,7 @@ const Nav = () => {
           <ul className="md:flex items-center gap-1">
             <li>
               <Button asChild variant="link">
-                <Link href="/projekte/kunden">Kunden Projekte</Link>
-              </Button>
-            </li>
-            <li>
-              <Button asChild variant="link">
-                <Link href="/projekte/dev">Dev Projekte</Link>
+                <Link href="/projekte/">Projekte</Link>
               </Button>
             </li>
             <li>

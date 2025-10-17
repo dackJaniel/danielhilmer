@@ -35,14 +35,15 @@ const RoundedIcon = ({
         className="rounded-full bg-white shadow"
         data-tooltip-id={`${id}`}
         data-tooltip-content={`${tooltip}`}
-        data-tooltip-place="bottom">
+        data-tooltip-place="bottom"
+      >
         <FontAwesomeIcon
           className={`text-gray-900 flex justify-center items-center cursor-pointer ${
             size === "sm"
               ? "w-4 h-4 p-1"
               : size === "md"
-              ? "w-6 h-6 p-2"
-              : "w-10 h-10 p-2"
+                ? "w-6 h-6 p-2"
+                : "w-10 h-10 p-2"
           }`}
           icon={icon}
         />
