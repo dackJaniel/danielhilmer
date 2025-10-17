@@ -4,13 +4,19 @@ import { Button } from "@/components/ui/button";
 import {
   faCss3,
   faGithub,
+  faGolang,
   faHtml5,
   faJs,
   faLinkedinIn,
   faNodeJs,
+  faPython,
   faReact,
 } from "@fortawesome/free-brands-svg-icons";
-import { faDatabase, faInfoCircle } from "@fortawesome/free-solid-svg-icons";
+import {
+  faBrain,
+  faDatabase,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
@@ -39,22 +45,21 @@ export default function Home() {
         <IconContainer>
           <RoundedIcon icon={faHtml5} tooltip="HTML5" />
           <RoundedIcon icon={faCss3} tooltip="CSS3, SCSS, Tailwind" />
-          <RoundedIcon icon={faGithub} tooltip="GitHub" />
+          <RoundedIcon icon={faGithub} tooltip="Git(Hub)" />
           <RoundedIcon icon={faJs} tooltip="JavaScript, TypeScript" />
           <RoundedIcon icon={faReact} tooltip="React, NextJS" />
           <RoundedIcon icon={faNodeJs} tooltip="NodeJS" />
           <RoundedIcon icon={faDatabase} tooltip="SQL, NoSQL, Prisma" />
+          <RoundedIcon icon={faPython} tooltip="Python" />
+          <RoundedIcon icon={faBrain} tooltip="AI, Machine Learning" />
+          <RoundedIcon icon={faGolang} tooltip="Go (Lernen)" />
         </IconContainer>
         <h1 className="text-4xl sm:text-5xl lg:text-7xl">
           Freiberufliche JavaScript Entwicklung
         </h1>
         <div className="my-8 bg-white shadow-sm p-4 md:p-8 rounded-lg flex gap-4 items-start w-full">
-          <FontAwesomeIcon
-            className="min-w-5 max-w-5 h-5 text-slate-900 hidden sm:block"
-            icon={faInfoCircle}
-          />
           <p>
-            Hi, ich bin <span className="font-bold">Daniel Hilmer</span>, ein
+            Hallo, ich bin <span className="font-bold">Daniel Hilmer</span>, ein
             leidenschaftlicher Webentwickler, der sich auf die Erstellung
             ansprechender Websites und innovativer Webanwendungen spezialisiert
             hat. Mit einem starken Fokus auf
