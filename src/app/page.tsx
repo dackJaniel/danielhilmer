@@ -112,7 +112,7 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full bg-primary py-10 mb-10">
+      {/*<section className="w-full bg-primary py-10 mb-10">
         <div className="w-full md:max-w-7xl m-auto">
           <div className="flex justify-between items-baseline">
             <h3 className="text-4xl sm:text-4xl lg:text-6xl mb-5 text-white">
@@ -136,7 +136,7 @@ export default async function Home() {
                 <div className="border border-gray-100 bg-gray-50 rounded-lg p-4 shadow-sm flex flex-col gap-2 relative overflow-hidden">
                   <h4 className="font-bold text-2xl">Kostenlos anfragen!</h4>
                   <div className="max-w-lg bg-green-200 border-2 p-4 border-green-300 rounded-md flex items-center justify-between my-4">
-                    {/* <h4 className="font-bold">Jetzt per WhatsApp kontaktieren</h4> */}
+                    <h4 className="font-bold">Jetzt per WhatsApp kontaktieren</h4>
                     <Button asChild variant="outline">
                       <Link
                         href="https://wa.me/message/SUK6VOGPWX2HJ1"
@@ -166,7 +166,7 @@ export default async function Home() {
             <CarouselNext />
           </Carousel>
         </div>
-      </section>
+      </section>*/}
     </main>
   );
 }

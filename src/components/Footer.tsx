@@ -28,22 +28,30 @@ const Footer = () => {
                 </li>
               </ul>
             </div>
-            {/* <div>
-              <h4 className="text-lg font-semibold">Blog</h4>
+            <div>
+              <h4 className="text-lg font-semibold">Projekte</h4>
               <ul>
                 <li>
                   <Link
-                    href="/blog/webdesign-webdevelopment-studium-sae"
+                    href="/projekte"
                     className="cursor-pointer hover:underline"
                   >
-                    So ist das Studium an der SAE
+                    Projekte ansehen
                   </Link>
                 </li>
               </ul>
-            </div> */}
+            </div>
             <div>
-              <h4 className="text-lg font-semibold">Datenschutz</h4>
+              <h4 className="text-lg font-semibold">Datenschutz & Kontakt</h4>
               <ul>
+                <li>
+                  <Link
+                    href="/kontakt"
+                    className="cursor-pointer hover:underline"
+                  >
+                    Kontakt aufnehmen
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/datenschutz"
@@ -69,7 +77,9 @@ const Footer = () => {
             </div> */}
           </div>
           <div className="mt-4">
-            <p className="text-sm">© Copyright 2024 - Daniel Hilmer</p>
+            <p className="text-sm">
+              © Copyright {new Date().getFullYear()} - Daniel Hilmer
+            </p>
           </div>
         </div>
       </footer>
