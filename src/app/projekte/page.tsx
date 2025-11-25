@@ -1,77 +1,17 @@
 import React from "react";
 import supabase from "@/server/db/supabase";
-import {
-  faCss3,
-  faFigma,
-  faHtml5,
-  faJs,
-  faNodeJs,
-  faPhp,
-  faPython,
-  faReact,
-  faSass,
-  faStripe,
-  faWordpressSimple,
-} from "@fortawesome/free-brands-svg-icons";
-import {
-  faBrain,
-  faLock,
-  faPhone,
-  faUpRightFromSquare,
-  faDatabase,
-  faInfoCircle,
-  faCartShopping,
-} from "@fortawesome/free-solid-svg-icons";
 import { SmallForm } from "@/components/SmallForm";
 import WhatsAppIcon from "@/components/icons/WhatsappIcon";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
-
-// Tooltip zu Icon Mapping
-const tooltipToIconMap: { [key: string]: any } = {
-  HTML5: faHtml5,
-  TailwindCSS: faCss3,
-  CSS3: faCss3,
-  SASS: faSass,
-  JavaScript: faJs,
-  NodeJS: faNodeJs,
-  NextJS: faReact,
-  React: faReact,
-  Python: faPython,
-  Zahlungen: faStripe,
-  Stripe: faStripe,
-  Figma: faFigma,
-  Login: faLock,
-  Auth: faLock,
-  PWA: faPhone,
-  AI: faBrain,
-  "External Link": faUpRightFromSquare,
-  Database: faDatabase,
-  Info: faInfoCircle,
-  WordPress: faWordpressSimple,
-  WooCommerce: faCartShopping,
-  PHP: faPhp,
-};
-
-// Hilfsfunktion: Tooltips zu Icons konvertieren
-function convertTooltipsToIcons(tooltipString: string) {
-  if (!tooltipString) return [];
-
-  const tooltips = tooltipString.split(",").map((tooltip) => tooltip.trim());
-  const icons = tooltips
-    .map(
-      (tooltip) => tooltipToIconMap[tooltip as keyof typeof tooltipToIconMap],
-    )
-    .filter(Boolean);
-
-  return icons;
-}
+import { convertTooltipsToIcons } from "../../lib/convertTooltipsToIcons";
 
 async function Projects() {
   const { data, error } = await supabase
     .from("project")
     .select("*")
+    .order("is_highlight", { ascending: false })
     .order("start_date", { ascending: false });
 
   if (error) {
@@ -143,6 +83,7 @@ async function Projects() {
         </div>
         {projectsWithImages.map((project, index) => (
           <ProjectCard
+            id={project.id}
             key={index}
             icons={project.icons}
             tooltips={project.tooltips}
@@ -150,6 +91,7 @@ async function Projects() {
             description={project.description}
             labels={project.labels}
             imageSrc={project.imageSrc}
+            is_highlight={project.is_highlight}
             link={{
               href: project.link,
               text: "Besuchen",
