@@ -242,52 +242,6 @@ export default async function BewerbungPage() {
           </span>
         </h2>
         <div className="space-y-6">
-          {/* SAE Institute */}
-          <div className="bg-white rounded-xl p-8 shadow-sm">
-            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-              <div>
-                <h3 className="text-2xl font-bold mb-2">
-                  Head Instructor Web Design & Web Development
-                </h3>
-                <p className="text-primary font-semibold">
-                  SAE Institute München
-                </p>
-              </div>
-              <span className="text-muted-foreground">01/2023 - 04/2025</span>
-            </div>
-            <ul className="space-y-2 text-muted-foreground">
-              <li className="flex items-start gap-2">
-                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>
-                  Leitung des gesamten Studienbereichs Web Development in
-                  München mit Verantwortung für Curriculum und
-                  Qualitätssicherung
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>
-                  Entwicklung & Einführung neuer Curricula im Bereich moderner
-                  JavaScript-Frameworks (React, Next.js, Node.js)
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>
-                  Planung & Umsetzung projektbasierter Lernmodule mit
-                  praxisnahen Webanwendungen
-                </span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                <span>
-                  Coaching & Prüfung von Studierenden in komplexen
-                  Entwicklungsprojekten
-                </span>
-              </li>
-            </ul>
-          </div>
-
           {/* Freelance */}
           <div className="bg-white rounded-xl p-8 shadow-sm">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
@@ -328,6 +282,48 @@ export default async function BewerbungPage() {
                   Eigenverantwortliche Projektplanung, Kundenmanagement und
                   Deployment
                 </span>
+              </li>
+            </ul>
+          </div>
+
+          {/* SAE Institute */}
+          <div className="bg-white rounded-xl p-8 shadow-sm">
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+              <div>
+                <h3 className="text-2xl font-bold mb-2">
+                  Head Instructor Web Design & Web Development
+                </h3>
+                <p className="text-primary font-semibold">
+                  SAE Institute München
+                </p>
+              </div>
+              <span className="text-muted-foreground">01/2023 - 04/2025</span>
+            </div>
+            <ul className="space-y-2 text-muted-foreground">
+              <li className="flex items-start gap-2">
+                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>
+                  Leitung des gesamten Studienbereichs Web Development in
+                  München mit Verantwortung für Curriculum und
+                  Qualitätssicherung
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>
+                  Entwicklung & Einführung neuer Curricula im Bereich JavaScript
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>
+                  Planung & Umsetzung projektbasierter Lernmodule mit
+                  praxisnahen Webanwendungen
+                </span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckIcon className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                <span>Coaching & Prüfung von Studierenden</span>
               </li>
             </ul>
           </div>
