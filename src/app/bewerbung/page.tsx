@@ -96,6 +96,7 @@ export default async function BewerbungPage() {
                 <Link
                   href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer/Lebenslauf.pdf?t=2025-11-27T17%3A52%3A35.958Z"
                   className="flex gap-2"
+                  target="_blank"
                 >
                   <FontAwesomeIcon icon={faDownload} />
                   Lebenslauf herunterladen
@@ -473,6 +474,7 @@ export default async function BewerbungPage() {
             <Link
               href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer/Lebenslauf.pdf?t=2025-11-27T17%3A52%3A35.958Z"
               className="flex gap-2"
+              target="_blank"
             >
               <FontAwesomeIcon icon={faDownload} />
               Lebenslauf herunterladen
