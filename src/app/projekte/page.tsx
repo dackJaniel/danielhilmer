@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import { convertTooltipsToIcons } from "../../lib/convertTooltipsToIcons";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { AlertCircleIcon } from "lucide-react";
 
 async function Projects() {
   const { data, error } = await supabase
@@ -14,34 +16,32 @@ async function Projects() {
     .order("is_highlight", { ascending: false })
     .order("start_date", { ascending: false });
 
-  if (error) {
-    console.error("Fehler beim Laden der Projekte:", error);
-    return <div>Fehler beim Laden der Projekte</div>;
+  let projectsWithImages = [];
+  if (!error) {
+    projectsWithImages = await Promise.all(
+      data.map(async (project) => {
+        // Tooltips aus DB zu Array konvertieren
+        const tooltips =
+          project.tooltips?.split(",").map((t: string) => t.trim()) || [];
+
+        // Icons basierend auf Tooltips generieren
+        const icons = convertTooltipsToIcons(project.tooltips);
+
+        // Labels zu Objekten konvertieren
+        const labels =
+          project.labels
+            ?.split(",")
+            .map((label: string) => ({ name: label.trim() })) || [];
+
+        return {
+          ...project,
+          icons: icons,
+          tooltips: tooltips,
+          labels: labels,
+        };
+      }),
+    );
   }
-
-  const projectsWithImages = await Promise.all(
-    data.map(async (project) => {
-      // Tooltips aus DB zu Array konvertieren
-      const tooltips =
-        project.tooltips?.split(",").map((t: string) => t.trim()) || [];
-
-      // Icons basierend auf Tooltips generieren
-      const icons = convertTooltipsToIcons(project.tooltips);
-
-      // Labels zu Objekten konvertieren
-      const labels =
-        project.labels
-          ?.split(",")
-          .map((label: string) => ({ name: label.trim() })) || [];
-
-      return {
-        ...project,
-        icons: icons,
-        tooltips: tooltips,
-        labels: labels,
-      };
-    }),
-  );
 
   return (
     <main className="py-10 flex flex-col gap-8 max-w-lg md:max-w-7xl m-auto px-2">
@@ -99,6 +99,16 @@ async function Projects() {
           />
         ))}
       </div>
+      {error && (
+        <Alert variant={"destructive"}>
+          <AlertCircleIcon />
+          <AlertTitle>Sorry, es ist ein Fehler aufgetreten</AlertTitle>
+          <AlertDescription>
+            Leider konnten die Projekte nicht geladen werden. Bitte versuche es
+            später erneut.
+          </AlertDescription>
+        </Alert>
+      )}
     </main>
   );
 }

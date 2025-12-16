@@ -31,18 +31,16 @@ export default async function Home() {
     .eq("is_highlight", true)
     .order("start_date", { ascending: false });
 
-  if (error) {
-    console.error("Fehler beim Laden der Projekte:", error);
-    return <div>Fehler beim Laden der Projekte</div>;
+  let projectsWithImages = [];
+  if (!error) {
+    projectsWithImages = await Promise.all(
+      data.map(async (project) => {
+        return {
+          ...project,
+        };
+      }),
+    );
   }
-
-  const projectsWithImages = await Promise.all(
-    data.map(async (project) => {
-      return {
-        ...project,
-      };
-    }),
-  );
 
   return (
     <main>
