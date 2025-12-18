@@ -24,6 +24,10 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  ButtonGroup,
+  ButtonGroupSeparator,
+} from "@/components/ui/button-group";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Bewerbung Software Entwickler",
@@ -92,22 +96,29 @@ export default async function BewerbungPage() {
           </p>
           <div className="flex gap-2 flex-wrap justify-between">
             <div className="flex gap-2 flex-wrap">
-              <Button asChild size="lg">
-                <Link
-                  href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer/Lebenslauf.pdf?t=2025-11-27T17%3A52%3A35.958Z"
-                  className="flex gap-2"
-                  target="_blank"
-                >
-                  <FontAwesomeIcon icon={faDownload} />
-                  Lebenslauf herunterladen
-                </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href="/kontakt" className="flex gap-2">
-                  <FontAwesomeIcon icon={faEnvelope} />
-                  Kontakt aufnehmen
-                </Link>
-              </Button>
+              <ButtonGroup>
+                <Button asChild size="lg">
+                  <Link
+                    href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer//Lebenslauf.pdf"
+                    className="flex gap-2"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faDownload} />
+                    Lebenslauf (DE)
+                  </Link>
+                </Button>
+                <ButtonGroupSeparator />
+                <Button asChild size="lg">
+                  <Link
+                    href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer//CV.pdf"
+                    className="flex gap-2"
+                    target="_blank"
+                  >
+                    <FontAwesomeIcon icon={faDownload} />
+                    CV (EN)
+                  </Link>
+                </Button>
+              </ButtonGroup>
             </div>
             <div className="flex gap-2 flex-wrap">
               <Button asChild variant="outline" size="lg">
@@ -387,13 +398,13 @@ export default async function BewerbungPage() {
             <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
               <div>
                 <h3 className="text-2xl font-bold mb-2">
-                  Fachinformatiker – Systemintegration
+                  Fachinformatiker – Systemintegration (Ausbildung)
                 </h3>
                 <p className="text-primary font-semibold">
                   Max-Planck-Gesellschaft, Generalverwaltung
                 </p>
               </div>
-              <span className="text-muted-foreground">09/2013 - 07/2017</span>
+              <span className="text-muted-foreground">09/2017 - 07/2020</span>
             </div>
             <p className="text-muted-foreground">
               Schwerpunkte: IT-Infrastruktur, Netzwerktechnik, Hardware,
@@ -465,21 +476,38 @@ export default async function BewerbungPage() {
               Kontakt aufnehmen
             </Link>
           </Button>
-          <Button
-            asChild
-            size="lg"
-            variant="outline"
-            className="bg-transparent text-white border-white hover:bg-white hover:text-primary"
-          >
-            <Link
-              href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer/Lebenslauf.pdf?t=2025-11-27T17%3A52%3A35.958Z"
-              className="flex gap-2"
-              target="_blank"
+          <ButtonGroup>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white border-white hover:bg-white hover:text-primary"
             >
-              <FontAwesomeIcon icon={faDownload} />
-              Lebenslauf herunterladen
-            </Link>
-          </Button>
+              <Link
+                href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer//Lebenslauf.pdf"
+                className="flex gap-2"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faDownload} />
+                Lebenslauf (DE)
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="bg-transparent text-white border-white hover:bg-white hover:text-primary"
+            >
+              <Link
+                href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer//CV.pdf"
+                className="flex gap-2"
+                target="_blank"
+              >
+                <FontAwesomeIcon icon={faDownload} />
+                CV (EN)
+              </Link>
+            </Button>
+          </ButtonGroup>
         </div>
       </section>
     </main>
