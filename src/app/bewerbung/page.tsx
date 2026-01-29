@@ -6,7 +6,6 @@ import CheckIcon from "@/components/icons/CheckIcon";
 import IconContainer from "@/components/icons/IconContainer";
 import RoundedIcon from "@/components/icons/RoundedIcon";
 import ProjectCard from "@/components/ProjectCard";
-import supabase from "@/server/db/supabase";
 import { convertTooltipsToIcons } from "@/lib/convertTooltipsToIcons";
 import profilePic from "@/images/danielhilmer.jpg";
 import {
@@ -28,6 +27,8 @@ import {
   ButtonGroup,
   ButtonGroupSeparator,
 } from "@/components/ui/button-group";
+import { createClient } from "@/lib/supabase/server";
+import { cookies } from "next/headers";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Bewerbung Software Entwickler",
@@ -38,6 +39,9 @@ export const metadata: Metadata = {
 };
 
 export default async function BewerbungPage() {
+  const cookieStore = await cookies();
+  const supabase = createClient(cookieStore);
+
   const { data, error } = await supabase
     .from("project")
     .select("*")
@@ -99,7 +103,7 @@ export default async function BewerbungPage() {
               <ButtonGroup>
                 <Button asChild size="lg">
                   <Link
-                    href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer//Lebenslauf.pdf"
+                    href="https://rkhpjgwktgxxgjxbzrzu.supabase.co/storage/v1/object/public/danielhilmer/Lebenslauf.pdf"
                     className="flex gap-2"
                     target="_blank"
                   >
@@ -110,7 +114,7 @@ export default async function BewerbungPage() {
                 <ButtonGroupSeparator />
                 <Button asChild size="lg">
                   <Link
-                    href="https://super.danielhilmer.de/storage/v1/object/public/danielhilmer//CV.pdf"
+                    href="https://rkhpjgwktgxxgjxbzrzu.supabase.co/storage/v1/object/public/danielhilmer/CV.pdf"
                     className="flex gap-2"
                     target="_blank"
                   >

@@ -2,8 +2,9 @@ import IconContainer from "@/components/icons/IconContainer";
 import RoundedIcon from "@/components/icons/RoundedIcon";
 import { Button } from "@/components/ui/button";
 import { convertTooltipsToIcons } from "@/lib/convertTooltipsToIcons";
-import supabase from "@/server/db/supabase";
+import { createClient } from "@/lib/supabase/server";
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { cookies } from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -13,6 +14,8 @@ export default async function Page({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
+  const cookieStore = await cookies();
+  const supabase = createClient(cookieStore);
 
   const { data, error } = await supabase
     .from("project")

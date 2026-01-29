@@ -5,16 +5,6 @@ import { SmallForm } from "../components/SmallForm";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import WhatsAppIcon from "@/components/icons/WhatsappIcon";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import ProjectCard from "@/components/ProjectCard";
-import supabase from "@/server/db/supabase";
-import { ArrowRightIcon } from "@radix-ui/react-icons";
 
 export const metadata: Metadata = {
   title: "Daniel Hilmer - Webentwicklung",
@@ -25,23 +15,6 @@ export const metadata: Metadata = {
 };
 
 export default async function Home() {
-  const { data, error } = await supabase
-    .from("project")
-    .select("*")
-    .eq("is_highlight", true)
-    .order("start_date", { ascending: false });
-
-  let projectsWithImages = [];
-  if (!error) {
-    projectsWithImages = await Promise.all(
-      data.map(async (project) => {
-        return {
-          ...project,
-        };
-      }),
-    );
-  }
-
   return (
     <main>
       <section className="max-w-2lg md:max-w-7xl m-auto p-2">
@@ -110,61 +83,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      {/*<section className="w-full bg-primary py-10 mb-10">
-        <div className="w-full md:max-w-7xl m-auto">
-          <div className="flex justify-between items-baseline">
-            <h3 className="text-4xl sm:text-4xl lg:text-6xl mb-5 text-white">
-              Projekte die{" "}
-              <span className="underline underline-offset-4">überzeugen</span>
-            </h3>
-            <Button variant={"outline"} asChild>
-              <Link href={"/projekte"} className="flex gap-2">
-                Alle Projekte <ArrowRightIcon />
-              </Link>
-            </Button>
-          </div>
-          <Carousel
-            opts={{
-              align: "start",
-            }}
-            className="w-full mb-4"
-          >
-            <CarouselContent>
-              <CarouselItem className="md:basis-1/3 lg:basis-1/4">
-                <div className="border border-gray-100 bg-gray-50 rounded-lg p-4 shadow-sm flex flex-col gap-2 relative overflow-hidden">
-                  <h4 className="font-bold text-2xl">Kostenlos anfragen!</h4>
-                  <div className="max-w-lg bg-green-200 border-2 p-4 border-green-300 rounded-md flex items-center justify-between my-4">
-                    <h4 className="font-bold">Jetzt per WhatsApp kontaktieren</h4>
-                    <Button asChild variant="outline">
-                      <Link
-                        href="https://wa.me/message/SUK6VOGPWX2HJ1"
-                        className="flex gap-2 w-full"
-                      >
-                        <WhatsAppIcon className="w-4 h-4" /> WhatsApp Kontakt
-                      </Link>
-                    </Button>
-                  </div>
-                  <SmallForm />
-                </div>
-              </CarouselItem>
-              {projectsWithImages.map((project, index) => (
-                <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
-                  <div className="p-1">
-                    <ProjectCard
-                      heading={project.heading}
-                      description={project.description}
-                      imageSrc={project.imageSrc}
-                      key={index}
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
-      </section>*/}
     </main>
   );
 }

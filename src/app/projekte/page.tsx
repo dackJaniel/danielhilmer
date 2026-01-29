@@ -1,5 +1,4 @@
 import React from "react";
-import supabase from "@/server/db/supabase";
 import { SmallForm } from "@/components/SmallForm";
 import WhatsAppIcon from "@/components/icons/WhatsappIcon";
 import { Button } from "@/components/ui/button";
@@ -8,8 +7,13 @@ import ProjectCard from "@/components/ProjectCard";
 import { convertTooltipsToIcons } from "../../lib/convertTooltipsToIcons";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { AlertCircleIcon } from "lucide-react";
+import { cookies } from "next/headers";
+import { createClient } from "@/lib/supabase/server";
 
 async function Projects() {
+  const cookieStore = await cookies();
+  const supabase = createClient(cookieStore);
+
   const { data, error } = await supabase
     .from("project")
     .select("*")

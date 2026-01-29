@@ -6,6 +6,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "*.danielhilmer.de",
       },
+      {
+        protocol: "https",
+        hostname: "rkhpjgwktgxxgjxbzrzu.supabase.co",
+      },
     ],
   },
 };
