@@ -77,7 +77,7 @@ const Footer = () => {
             </div> */}
           </div>
           <div className="mt-4">
-            <p className="text-sm">
+            <p className="text-sm" suppressHydrationWarning>
               © Copyright {new Date().getFullYear()} - Daniel Hilmer
             </p>
           </div>

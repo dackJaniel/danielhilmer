@@ -24,7 +24,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de" suppressHydrationWarning>
-      <link rel="icon" href="/logo_durch.png" type="image/png" sizes="32x32" />
+      <head>
+        <link rel="icon" href="/logo_durch.png" type="image/png" sizes="32x32" />
+      </head>
       <body className="bg-gray-100">
         <Provider>
           <Nav />
@@ -40,17 +42,8 @@ export default function RootLayout({
           ></Script>
           <Toaster />
         </Provider>
+        {process.env.MATOMO && <Matomo />}
       </body>
-      {process.env.MATOMO && <Matomo />}
-      {/* <GoogleAnalytics gaId="G-3EZ6RJSYKF" />
-      <Script
-        strategy="lazyOnload"
-        id="usercentrics-cmp"
-        data-eu-mode="true"
-        data-settings-id="t5sF0OzEcttMs-"
-        src="https://app.eu.usercentrics.eu/browser-ui/latest/loader.js"
-        async
-      ></Script> */}
     </html>
   );
 }

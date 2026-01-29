@@ -2,7 +2,7 @@
 
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useId } from "react";
 import { Tooltip } from "react-tooltip";
 
 interface IRoundedIconProps {
@@ -11,16 +11,12 @@ interface IRoundedIconProps {
   size?: "sm" | "md" | "lg";
 }
 
-function randomId() {
-  return Math.random().toString(36);
-}
-
 const RoundedIcon = ({
   icon,
   tooltip = "",
   size = "md",
 }: IRoundedIconProps) => {
-  const id = randomId();
+  const id = useId();
   return (
     <>
       <Tooltip

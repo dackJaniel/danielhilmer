@@ -3,8 +3,8 @@ import { init, push } from "@socialgouv/matomo-next";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Suspense, useEffect, useState } from "react";
 
-const MATOMO_URL = "https://matomo.danielhilmer.de";
-const MATOMO_SITE_ID = "3";
+const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
+const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_ID;
 
 const MatomoComponent = () => {
   const [initialised, setInitialised] = useState(false);
