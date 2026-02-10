@@ -16,7 +16,7 @@ import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
-import { sendEmail } from "@/app/kontakt/sendEmail";
+// import { sendEmail } from "@/app/kontakt/sendEmail";
 
 const formSchema = z.object({
   email: z
@@ -39,20 +39,20 @@ export function SmallForm() {
   });
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
-    const res = await sendEmail(values);
+    // const res = await sendEmail(values);
 
-    if (res.success) {
-      toast({
-        title: "Anfrage erfolgreich gesendet",
-        description:
-          "Vielen Dank für Ihre Anfrage. Ich melde mich bald bei Ihnen.",
-      });
-    } else {
-      toast({
-        title: "Fehler beim Senden der Anfrage",
-        description: `Bitte versuche es später erneut:${res.error}`,
-      });
-    }
+    // if (res.success) {
+    //   toast({
+    //     title: "Anfrage erfolgreich gesendet",
+    //     description:
+    //       "Vielen Dank für Ihre Anfrage. Ich melde mich bald bei Ihnen.",
+    //   });
+    // } else {
+    //   toast({
+    //     title: "Fehler beim Senden der Anfrage",
+    //     description: `Bitte versuche es später erneut:${res.error}`,
+    //   });
+    // }
 
     form.reset();
   }
