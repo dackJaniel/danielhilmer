@@ -1,5 +1,5 @@
 import React from "react";
-import { SmallForm } from "@/components/SmallForm";
+// import { SmallForm } from "@/components/SmallForm";
 import WhatsAppIcon from "@/components/icons/WhatsappIcon";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -69,10 +69,9 @@ async function Projects() {
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <div className="border border-gray-100 bg-gray-50 rounded-lg p-4 shadow-sm flex flex-col gap-2 relative overflow-hidden">
+        {/*<div className="border border-gray-100 bg-gray-50 rounded-lg p-4 shadow-sm flex flex-col gap-2 relative overflow-hidden">
           <h4 className="font-bold text-2xl mb-4">Kostenlos anfragen!</h4>
           <div className="max-w-lg bg-green-200 border-2 p-4 border-green-300 rounded-md flex items-center justify-between my-4">
-            {/* <h4 className="font-bold">Jetzt per WhatsApp kontaktieren</h4> */}
             <Button asChild variant="outline">
               <Link
                 href="https://wa.me/message/SUK6VOGPWX2HJ1"
@@ -84,7 +83,7 @@ async function Projects() {
           </div>
 
           <SmallForm />
-        </div>
+        </div>*/}
         {projectsWithImages.map((project, index) => (
           <ProjectCard
             id={project.id}

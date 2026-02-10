@@ -42,16 +42,16 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-semibold">Datenschutz & Kontakt</h4>
+              <h4 className="text-lg font-semibold">Datenschutz</h4>
               <ul>
-                <li>
+                {/*<li>
                   <Link
                     href="/kontakt"
                     className="cursor-pointer hover:underline"
                   >
                     Kontakt aufnehmen
                   </Link>
-                </li>
+                </li>*/}
                 <li>
                   <Link
                     href="/datenschutz"

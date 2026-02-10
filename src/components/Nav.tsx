@@ -25,7 +25,7 @@ const Nav = () => {
             className="cursor-pointer w-10 h-10"
           />
         </Link>
-        <div className="md:hidden flex items-center gap-2">
+        {/*<div className="md:hidden flex items-center gap-2">
           <Button asChild>
             <Link href="/kontakt">Kontakt</Link>
           </Button>
@@ -34,7 +34,7 @@ const Nav = () => {
             className="text-2xl cursor-pointer hover:text-gray-700 transition-colors"
             onClick={toggleMenu}
           />
-        </div>
+        </div>*/}
         <div
           id="menu"
           className="flex md:block absolute md:relative right-2 md:right-0 top-20 md:top-0 w-fit md:w-auto h-fit md:h-auto bg-white justify-center items-center px-4 md:px-0 py-8 md:py-0 rounded-2xl shadow-md md:shadow-none"
@@ -45,16 +45,16 @@ const Nav = () => {
                 <Link href="/projekte/">Projekte</Link>
               </Button>
             </li>
-            <li>
+            {/*<li>
               <Button asChild variant="link">
                 <Link href="/about">Über mich</Link>
               </Button>
-            </li>
-            <li className="hidden md:block">
+            </li>*/}
+            {/*<li className="hidden md:block">
               <Button asChild>
                 <Link href="/kontakt">Kontakt</Link>
               </Button>
-            </li>
+            </li>*/}
             {/* <li>
               <ModeToggle />
             </li> */}
